@@ -39,7 +39,69 @@
 
 
   <main>
-    
+      <div class="container mt-4">
+        <h3>Energy Advocate Statistics</h3>
+        <h4 class="mt-4 mb-2">Client information</h4>
+        <div class="row justify-content-center align-items-center">
+            <div class="container col-xs-12 col-sm-8 col-md-8">
+                <nav class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <div class="dropdown">
+                    <button class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More data</button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" id="ea1-tab" href="#ea1" role="tab" data-toggle="tab" aria-controls="ea1">Energy Advocate 1</a>
+                      <a class="dropdown-item" id="ea2-tab" href="#ea2" role="tab" data-toggle="tab" aria-controls="ea2">Energy Advocate 2</a>
+                  </div>
+              </div>
+          </nav>
+
+          <script>
+              $(document).ready(function () {
+                $("button").click(function(){
+                  $("a").removeClass("active");
+              });
+            });
+        </script>
+
+        <!-- table content -->
+        <div id="information-nav-content" class="tab-content"> 
+            <div role="tadpanel" class="tab-pane fade" id="ea1" aria-labelledby="ea1-tab">
+                <table class="table table-striped table-sm">
+                    <tbody>
+                        <tr class="table-primary" >
+                            <th colspan="2">One</th>
+                        </tr>
+                     
+                       
+                        <tr>
+                            <th class="col-xs-12 col-sm-6 col-md-4">&nbsp;</th>
+                            <td class="col-xs-12 col-sm-6 col-md-8">&nbsp;</td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="information-nav-content" class="tab-content"> 
+            <div role="tadpanel" class="tab-pane fade" id="ea2" aria-labelledby="ea2-tab">
+                <table class="table table-striped table-sm">
+                    <tbody>
+                        <tr class="table-primary" >
+                            <th colspan="2">Two</th>
+                        </tr>
+                     
+                       
+                        <tr>
+                            <th class="col-xs-12 col-sm-6 col-md-4">&nbsp;</th>
+                            <td class="col-xs-12 col-sm-6 col-md-8">&nbsp;</td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
 </main>
 
 <footer class="mt-5">
