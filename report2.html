@@ -1,205 +1,206 @@
 <!DOCTYPE>
 <html lang="en">  
 <head>
-    <meta http-equiv="Content-type" content="text/html">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8" >
-    <title>Manager Interactive Wireframe</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" title="master">
-    <link rel="stylesheet" href="css/custom.css" type="text/css" media="screen" title="master">
-    <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+  <meta http-equiv="Content-type" content="text/html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" >
+  <title>Manager Interactive Wireframe</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" title="master">
+  <link rel="stylesheet" href="css/custom.css" type="text/css" media="screen" title="master">
+  <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
 
 </head>
 
 <body style="height:100%;">
-    <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-primary">
-        <a class="navbar-brand mx-auto" href="https://tashaford.github.io/manager_interactive_wireframe/home_loggedin.html">
-            <img class="rounded" src="https://tashaford.github.io/manager_interactive_wireframe/images/EPCAS-square.jpg" alt="logo" width="40">
-        </a>
-        <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>   
-        <div class="collapse navbar-collapse" id="nav-content">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/home_loggedin.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/send_link.html" class="nav-link">Send Link</a></li>
-                <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/client_list.html" class="nav-link">Client List</a></li>
-                <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/reports.html" class="nav-link active">Reports</a></li>
-                <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/messages.html" class="nav-link">Messages <span class="badge badge-danger">4</span></a></li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
-          </form class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <ul class="navbar-nav my-2 my-lg-0">
-              <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/index.html" class="nav-link">Log Out</a></li>
-          </ul>
-      </div>
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand mx-auto" href="https://tashaford.github.io/manager_interactive_wireframe/home_loggedin.html">
+      <img class="rounded" src="https://tashaford.github.io/manager_interactive_wireframe/images/EPCAS-square.jpg" alt="logo" width="40">
+    </a>
+    <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>   
+    <div class="collapse navbar-collapse" id="nav-content">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/home_loggedin.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/send_link.html" class="nav-link">Send Link</a></li>
+        <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/client_list.html" class="nav-link">Client List</a></li>
+        <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/reports.html" class="nav-link active">Reports</a></li>
+        <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/messages.html" class="nav-link">Messages <span class="badge badge-danger">4</span></a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+      </form class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <ul class="navbar-nav my-2 my-lg-0">
+        <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/index.html" class="nav-link">Log Out</a></li>
+      </ul>
+    </div>
   </nav>
 
 
   <main style=" min-height:73%;">
-      <div class="container mt-4">
-        <h3>Energy Advocate Statistics</h3>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-          Return to reports<br>
-          <a href="https://tashaford.github.io/manager_interactive_wireframe/reports.html" class="btn btn-outline-secondary btn-sm mb-2">Return</a></div>
-          <div class="container col-xs-12 col-sm-9 col-md-9">
-            <nav class="nav nav-tabs" id="nav-tab" role="tablist">
-              <div class="dropdown">
-                <button class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Choose energy advocate</button>
-                <div class="dropdown-menu">
-                  <!-- page 1 -->
-                  <a class="dropdown-item" id="eaOne-tab" href="#eaOne" role="tab" data-toggle="tab" aria-controls="eaOne">Energy Advocate 1</a>
-                  <!-- page 2 -->
-                  <a class="dropdown-item" id="eaTwo-tab" href="#eaTwo" role="tab" data-toggle="tab" aria-controls="eaTwo">Energy Advocate 2</a>
-                  <!-- page 3 -->
-                  <a class="dropdown-item" id="eaThree-tab" href="#eaThree" role="tab" data-toggle="tab" aria-controls="eaThree">Energy Advocate 3</a>
-                  <!-- page 4 -->
-                  <a class="dropdown-item" id="eaFour-tab" href="#eaFour" role="tab" data-toggle="tab" aria-controls="eaFour">Energy Advocate 4</a>
-                  <!-- pafe 5 -->
-                  <a class="dropdown-item" id="EaFive-tab" href="#eaFive" role="tab" data-toggle="tab" aria-controls="eaFive">Energy Advocate 5</a>
-              </div>   
+    <div class="container mt-4">
+      <h3>Energy Advocate Statistics</h3>
+      <div class="col-12">
+        Return to reports<br>
+        <a href="https://tashaford.github.io/manager_interactive_wireframe/reports.html" class="btn btn-outline-secondary btn-sm mb-2">Return</a>
+      </div>
+      <div class="container col-12">
+        <nav class="nav nav-tabs" id="nav-tab" role="tablist">
+          <div class="dropdown">
+            <button class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Choose energy advocate</button>
+            <div class="dropdown-menu">
+              <!-- page 1 -->
+              <a class="dropdown-item" id="eaOne-tab" href="#eaOne" role="tab" data-toggle="tab" aria-controls="eaOne">Energy Advocate 1</a>
+              <!-- page 2 -->
+              <a class="dropdown-item" id="eaTwo-tab" href="#eaTwo" role="tab" data-toggle="tab" aria-controls="eaTwo">Energy Advocate 2</a>
+              <!-- page 3 -->
+              <a class="dropdown-item" id="eaThree-tab" href="#eaThree" role="tab" data-toggle="tab" aria-controls="eaThree">Energy Advocate 3</a>
+              <!-- page 4 -->
+              <a class="dropdown-item" id="eaFour-tab" href="#eaFour" role="tab" data-toggle="tab" aria-controls="eaFour">Energy Advocate 4</a>
+              <!-- pafe 5 -->
+              <a class="dropdown-item" id="EaFive-tab" href="#eaFive" role="tab" data-toggle="tab" aria-controls="eaFive">Energy Advocate 5</a>
+            </div>   
           </div>
-      </nav>
-      <script>
+        </nav>
+        <script>
           $(document).ready(function () {
             $("button").click(function(){
               $("a").removeClass("active");
+            });
           });
-        });
-    </script>
+        </script>
 
-    <!-- table content -->
-    <div id="information-nav-content" class="tab-content">
-      <!-- page one informaiton table -->
-      <div role="tadpanel" class="tab-pane fade show active" id="eaOne" aria-labelledby="eaOne-tab">
-        <table class="table table-striped table-sm">
-          <tbody>
-              <tr>
-                <th>Name</th>
-                <td>Energy Advocate 1</td>
-            </tr>
-            <tr>
-                <th>Total number of Clients</th>
-                <td>35</td>
-            </tr>
-            <tr>
-              <th>New Clients in 2018</th>
-              <td>3</td>
-          </tr>
-          <tr>
-              <th>Total savings for 2018</th>
-              <td>£1540</td>
-          </tr>
-      </tbody>
-  </table>
-</div>
-<!-- page two information table-->
-<div role="tadpanel" class="tab-pane fade" id="eaTwo" aria-labelledby="eaTwo-tab">
-    <table class="table table-striped table-sm">
-      <tbody>
-          <tr>
-            <th>Name</th>
-            <td>Energy Advocate 2</td>
-        </tr>
-        <tr>
-          <th>Total number of Clients</th>
-          <td>21</td>
-      </tr>
-      <tr>
-          <th>New Clients in 2018</th>
-          <td>7</td>
-      </tr>
-      <tr>
-          <th>Total savings for 2018</th>
-          <td>£890</td>
-      </tr>
-  </tbody>
-</table>
-</div>
-<!-- page 3 information table -->
-<div role="tadpanel" class="tab-pane fade" id="eaThree" aria-labelledby="eaThree-tab">
-    <table class="table table-striped table-sm">
-      <tbody>
-          <tr>
-            <th>Name</th>
-            <td>Energy Advocate 3</td>
-        </tr>
-        <tr>
-          <th>Total number of Clients</th>
-          <td>26</td>
-      </tr>
-      <tr>
-          <th>New Clients in 2018</th>
-          <td>2</td>
-      </tr>
-      <tr>
-          <th>Total savings for 2018</th>
-          <td>£893</td>
-      </tr>
-  </tbody>
-</table>
-</div>
-<!-- page four information table -->
-<div role="tadpanel" class="tab-pane fade" id="eaFour" aria-labelledby="eaFour-tab">
-    <table class="table table-striped table-sm">
-      <tbody>
-          <tr>
-            <th>Name</th>
-            <td>Energy Advocate 4</td>
-        </tr>
-        <tr>
-          <th>Total number of Clients</th>
-          <td>31</td>
-      </tr>
-      <tr>
-          <th>New Clients in 2018</th>
-          <td>8</td>
-      </tr>
-      <tr>
-          <th>Total savings for 2018</th>
-          <td>£1335</td>
-      </tr>
-  </tbody>
-</table>
-</div>
-<!-- page five information table -->
-<div role="tadpanel" class="tab-pane fade" id="eaFive" aria-labelledby="eaFive-tab">
-    <table class="table table-striped table-sm">
-      <tbody>
-          <tr>
-            <th>Name</th>
-            <td>Energy Advocate 5</td>
-        </tr>
-        <tr>
-            <th>Total number of Clients</th>
-          <td>23</td>
-      </tr>
-      <tr>
-          <th>New Clients in 2018</th>
-          <td>6</td>
-      </tr>
-      <tr>
-          <th>Total savings for 2018</th>
-          <td>£734</td>
-      </tr>  
-  </tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
+        <!-- table content -->
+        <div id="information-nav-content" class="tab-content">
+          <!-- page one informaiton table -->
+          <div role="tadpanel" class="tab-pane fade show active" id="eaOne" aria-labelledby="eaOne-tab">
+            <table class="table table-striped table-sm">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <td>Energy Advocate 1</td>
+                </tr>
+                <tr>
+                  <th>Total number of Clients</th>
+                  <td>35</td>
+                </tr>
+                <tr>
+                  <th>New Clients in 2018</th>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <th>Total savings for 2018</th>
+                  <td>£1540</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- page two information table-->
+          <div role="tadpanel" class="tab-pane fade" id="eaTwo" aria-labelledby="eaTwo-tab">
+            <table class="table table-striped table-sm">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <td>Energy Advocate 2</td>
+                </tr>
+                <tr>
+                  <th>Total number of Clients</th>
+                  <td>21</td>
+                </tr>
+                <tr>
+                  <th>New Clients in 2018</th>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <th>Total savings for 2018</th>
+                  <td>£890</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- page 3 information table -->
+          <div role="tadpanel" class="tab-pane fade" id="eaThree" aria-labelledby="eaThree-tab">
+            <table class="table table-striped table-sm">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <td>Energy Advocate 3</td>
+                </tr>
+                <tr>
+                  <th>Total number of Clients</th>
+                  <td>26</td>
+                </tr>
+                <tr>
+                  <th>New Clients in 2018</th>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th>Total savings for 2018</th>
+                  <td>£893</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- page four information table -->
+          <div role="tadpanel" class="tab-pane fade" id="eaFour" aria-labelledby="eaFour-tab">
+            <table class="table table-striped table-sm">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <td>Energy Advocate 4</td>
+                </tr>
+                <tr>
+                  <th>Total number of Clients</th>
+                  <td>31</td>
+                </tr>
+                <tr>
+                  <th>New Clients in 2018</th>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <th>Total savings for 2018</th>
+                  <td>£1335</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- page five information table -->
+          <div role="tadpanel" class="tab-pane fade" id="eaFive" aria-labelledby="eaFive-tab">
+            <table class="table table-striped table-sm">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <td>Energy Advocate 5</td>
+                </tr>
+                <tr>
+                  <th>Total number of Clients</th>
+                  <td>23</td>
+                </tr>
+                <tr>
+                  <th>New Clients in 2018</th>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <th>Total savings for 2018</th>
+                  <td>£734</td>
+                </tr>  
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</main>
+  </main>
 
-<footer class="mt-2" style="height:30px; margin-top:-30px;">
-  <nav class="navbar navbar-expand-sm">  
-    <img class="rounded mx-auto" src="https://tashaford.github.io/manager_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-    <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-    <img class="rounded mx-auto" src="https://tashaford.github.io/manager_interactive_wireframe/images/esf.png" alt="logo" width="250">
-  </nav>
-</footer>
+  <footer class="mt-2" style="height:30px; margin-top:-30px;">
+    <nav class="navbar navbar-expand-sm">  
+      <img class="rounded mx-auto" src="https://tashaford.github.io/manager_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+      <img class="rounded mx-auto" src="https://tashaford.github.io/manager_interactive_wireframe/images/esf.png" alt="logo" width="250">
+    </nav>
+  </footer>
 </body>
 
 <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
