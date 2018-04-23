@@ -40,63 +40,67 @@
     <div class="container">
         <h3 class="mt-4 mb-3">Send link to client</h3>
         <p class="mb-4">Information here</p>
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mt-0">
+                
+            </div>
 
 
-
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#modal">
-            Invite new citizen to service
-        </button>
-        <!-- Modal -->
-        <div class="modal fade " id="modal" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="label">Compare Savings per Year</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-            <div class="card">
-                <p class="card-header bg-light">By text</p>
-                <div class="container card-body">
-                    <form action="/#">
-                        <div class="form-group row">
-                            <p for="forename" class="col-12"">Forename</p>
-                            <div class="col-12">
-                                <input type="text" class="form-control" id="forename" name="forename">
-                            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-4">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#modal">
+                    Invite new citizen to service
+                </button>
+                <!-- Modal -->
+                <div class="modal fade " id="modal" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="label">Compare Savings per Year</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="card">
+                        <p class="card-header bg-light">By text</p>
+                        <div class="container card-body">
+                            <form action="/#">
+                                <div class="form-group row">
+                                    <p for="forename" class="col-12"">Forename</p>
+                                    <div class="col-12">
+                                        <input type="text" class="form-control" id="forename" name="forename">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <p for="surname" class="col-12">Surname</p>
+                                    <div class="col-xs-12">
+                                        <input type="text" class="form-control" id="surname" name="surname">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-12">
+                                        <select name="assignadvocate">
+                                            <option value="default">Contat method</option>
+                                            <option value="ea1">Mobile</option>
+                                            <option value="ea2">Email</option>
+                                        </select>
+                                        <input type="text" class="form-control" id="mobile" name="mobile">
+                                    </div>
+                                </div>
+                            </form>
+                            <a href="https://tashaford.github.io/manager_interactive_wireframe/send_link.html" class="btn btn-secondary">Send text</a>
                         </div>
-                        <div class="form-group row">
-                            <p for="surname" class="col-12">Surname</p>
-                            <div class="col-xs-12">
-                                <input type="text" class="form-control" id="surname" name="surname">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-12">
-                                <select name="assignadvocate">
-                                    <option value="default">Contat method</option>
-                                    <option value="ea1">Mobile</option>
-                                    <option value="ea2">Email</option>
-                                </select>
-                                <input type="text" class="form-control" id="mobile" name="mobile">
-                            </div>
-                        </div>
-                    </form>
-                    <a href="https://tashaford.github.io/manager_interactive_wireframe/send_link.html" class="btn btn-secondary">Send text</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
     </div>
 </div>
 </div>
-
-
 </div>
 </main>
 
