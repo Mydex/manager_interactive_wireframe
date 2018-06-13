@@ -186,6 +186,59 @@
     });
   });
 </script>
+<script>
+  (function(document) {
+    'use strict';
+    var StatusFilter = (function(Arr) {
+      var input;
+
+      function onInputEvent(e) {
+        input = e.target;
+        var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+        Arr.forEach.call(tables, function(table) {
+          Arr.forEach.call(table.tBodies, function(tbody) {
+            Arr.forEach.call(tbody.rows, filterRow);
+          });
+        });
+      }
+
+      function filterRow(row) {
+        var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
+        row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+      }
+
+      return {
+        init: function() {
+          var inputs = document.getElementsByClassName('tableFilter');
+          Arr.forEach.call(inputs, function(input) {
+            input.oninput = onInputEvent;
+          });
+        }
+      };
+    })(Array.prototype);
+
+    document.addEventListener('readystatechange', function() {
+      if (document.readyState === 'complete') {
+        StatusFilter.init();
+      }
+    });
+
+  })(document);
+</script>
+<script type="text/javascript">
+  function showfield(name){
+    if(name == 'ea1') {
+      document.getElementById('input').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/>';
+    } else if (name == 'ea2') {
+      document.getElementById('input').innerHTML = 'Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+    } else if (name == 'ea3') {
+      document.getElementById('input').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/> Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+    }
+    else {
+      document.getElementById('input').innerHTML='';
+    } 
+  }
+</script>
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
   <nav class="navbar navbar-expand-sm">  
