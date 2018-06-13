@@ -47,6 +47,26 @@
     <div class="container">
       <h3 class="mt-4">Manager Dashboard</h3>
       <div class="row">
+        <h4 class="mt-4 mb-2">Add task</h4>
+        <div class="container">
+          <form action="#/">
+            <div>
+              <label for="taskType" class="mt-1 mb-1">Type</label>
+              <select name="taskType" id="taskType" onchange="showForm(this.options[this.selectedIndex].value)" required>
+                <option value="default"></option>
+                <option value="homeVisit">Add home visit</option>
+                <option value="phoneCitizen">Phone call - citizen</option>
+                <option value="phoneHomeVisit">Phone call - home visit</option>
+                <option value="contactUpdate">Contact - update</option>
+              </select>
+            </div>
+            <div id="formGenerated"></div>
+          </form>
+          <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a>
+        </div>
+      </div>
+
+      <div class="row">
         <h4 class="mt-4 mb-2">Task List</h4>
         <div class="table-responsive">
           <table class="table table-striped table-bordered table-sm text-left sortable">
@@ -218,6 +238,130 @@
 
 </div>
 </main>
+
+<script>
+  function showForm(name){
+    console.log('started');
+    if(name == 'homeVisit') {
+      document.getElementById('formGenerated').innerHTML =
+      '<form action="/#">\
+      <label for="clientName" class="mt-1 mb-1">Assign to a client</label>\
+      <select id="clientName" id="clientName" class="form-control mb-1" onchange="showClientInfo(this.options[this.selectedIndex].value)" required>\
+      <option value="noClient">No client</option>\
+      <option value="client">Citizen Four</option>\
+      <option value="client">Citizen Seven</option>\
+      <option value="client">Citizen Nine</option>\
+      <option value="client">Citizen Thirteen</option>\
+      <option value="client">Citizen Fifteen</option>\
+      <option value="client">Citizen Ninenteen</option>\
+      <option value="client">Citizen Twenty</option>\
+      <option value="client">Citizen Twenty-four</option>\
+      <option value="client">Citizen Twenty-eight</option>\
+      <option value="client">Citizen Twenty-nine</option>\
+      <option value="client">Citizen Thirty-two</option>\
+      <option value="client">Citizen Thirty-six</option>\
+      </select>\
+      <div id="clientInfo"></div>\
+      <div class="mt-1 mb-1"><label placeholder="01/01/2018" class="mt-0 mb-0">Date</label></div>\
+      <input class=" mt-0 p-1 form-control" type="date">\
+      <div class="row mt-1 mb-1">\
+      <div class="col-lg-6 col-md-6">\
+      <div class="mt-0 mb-0"><label class="mt-0 mb-0">Start time</label></div>\
+      <input class="mt-0 p-1 form-control" type="time">\
+      </div>\
+      <div class="col-lg-6 col-md-6">\
+      <div class="mt-0 mb-0"><label class="mt-0 mb-0">End time</label></div>\
+      <input class="mt-0 p-1 form-control" type="time">\
+      </div>\
+      </div>\
+      </form>';
+    } else if ( name == 'phoneCitizen'){
+      document.getElementById('formGenerated').innerHTML =
+      '<div>\
+      <label>Task Details</label>\
+      <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>\
+      </div>\
+      <div>\
+      <label for="taskType" class="mt-1 mb-1">Assign to a client</label>\
+      <select class="form-control form-control-sm" id="taskType">\
+      <option>N/a</option>\
+      <option>Citizen Four</option>\
+      <option>Citizen Seven</option>\
+      <option>Citizen Nine</option>\
+      <option>Citizen Thirteen</option>\
+      <option>Citizen Fifteen</option>\
+      <option>Citizen Ninenteen</option>\
+      <option>Citizen Twenty</option>\
+      <option>Citizen Twenty-four</option>\
+      <option>Citizen Twenty-eight</option>\
+      <option>Citizen Twenty-nine</option>\
+      <option>Citizen Thirty-two</option>\
+      <option>Citizen Thirty-six</option>\
+      </select>\
+      </div>';
+    } else if ( name == 'phoneHomeVisit'){
+      document.getElementById('formGenerated').innerHTML =
+      '<div>\
+      <label>Task Details</label>\
+      <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>\
+      </div>\
+      <div>\
+      <label for="taskType" class="mt-1 mb-1">Assign to a client</label>\
+      <select class="form-control form-control-sm" id="taskType">\
+      <option>N/a</option>\
+      <option>Citizen Four</option>\
+      <option>Citizen Seven</option>\
+      <option>Citizen Nine</option>\
+      <option>Citizen Thirteen</option>\
+      <option>Citizen Fifteen</option>\
+      <option>Citizen Ninenteen</option>\
+      <option>Citizen Twenty</option>\
+      <option>Citizen Twenty-four</option>\
+      <option>Citizen Twenty-eight</option>\
+      <option>Citizen Twenty-nine</option>\
+      <option>Citizen Thirty-two</option>\
+      <option>Citizen Thirty-six</option>\
+      </select>\
+      </div>';
+    } else if ( name == 'contactUpdate'){
+      document.getElementById('formGenerated').innerHTML =
+      '<div>\
+      <label>Task Details</label>\
+      <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>\
+      </div>\
+      <div>\
+      <label for="taskType" class="mt-1 mb-1">Assign to a client</label>\
+      <select class="form-control form-control-sm" id="taskType">\
+      <option>N/a</option>\
+      <option>Citizen Four</option>\
+      <option>Citizen Seven</option>\
+      <option>Citizen Nine</option>\
+      <option>Citizen Thirteen</option>\
+      <option>Citizen Fifteen</option>\
+      <option>Citizen Ninenteen</option>\
+      <option>Citizen Twenty</option>\
+      <option>Citizen Twenty-four</option>\
+      <option>Citizen Twenty-eight</option>\
+      <option>Citizen Twenty-nine</option>\
+      <option>Citizen Thirty-two</option>\
+      <option>Citizen Thirty-six</option>\
+      </select>\
+      </div>';
+    } else {
+      document.getElementById('formGenerated').innerHTML='';
+    } 
+  }
+
+  function showClientInfo(name){
+    if(name == 'client') {
+      document.getElementById('clientInfo').innerHTML = 
+      'Address: 12 Fake Street <br>Profile: <a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">view</a>';
+    } else {
+      document.getElementById('clientInfo').innerHTML='';
+    } 
+  }
+</script>
+
 
 <script>
  var compare = {
