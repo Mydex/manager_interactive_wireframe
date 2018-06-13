@@ -21,18 +21,25 @@
         </button>   
         <div class="collapse navbar-collapse" id="nav-content">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/home_loggedin.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/client_list.html" class="nav-link">Client List</a></li>
-                <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/reports.html" class="nav-link active">Reports</a></li>
-                <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/messages.html" class="nav-link">Messages <span class="badge badge-danger">4</span></a></li>
-                <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/referral_man.html" class="nav-link">Referral Management</a></li>
-            </ul>
+                    <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/home_loggedin.html" class="nav-link text-white font-weight-bold font-italic">Home</a></li>
+                    <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/client_list.html" class="nav-link text-white font-weight-light">Client List</a></li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle text-white font-weight-light" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://tashaford.github.io/manager_interactive_wireframe/reports.html">Report overview</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://tashaford.github.io/manager_interactive_wireframe/report1.html">Report1</a>
+                        <a class="dropdown-item" href="https://tashaford.github.io/manager_interactive_wireframe/report2">Report2</a>
+                      </div>
+                    </li>
+                    <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/messages.html" class="nav-link text-white font-weight-light">Messages <span class="badge badge-danger">4</span></a></li>
+                    <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/referral_man.html" class="nav-link text-white font-weight-light">Referral Management</a></li>
+                  </ul>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-info btn-sm my-2 my-sm-0" type="submit">Search</button>
+              <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
           </form class="navbar-nav mr-auto mt-2 mt-lg-0">
           <ul class="navbar-nav my-2 my-lg-0">
-              <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/index.html" class="nav-link">Log Out</a></li>
+              <li class="nav-item"><a href="https://tashaford.github.io/manager_interactive_wireframe/index.html" class="nav-link nav-link text-white font-weight-light">Log Out</a></li>
           </ul>
       </div>
   </nav>
@@ -40,19 +47,19 @@
   <main style=" min-height:75%;">
     <div class="container mt-4">
         <h3 class="mb-4">Savings Overview</h3>
-        <div class="mb-2">Return to reports <a href="https://tashaford.github.io/manager_interactive_wireframe/reports.html" class="btn btn-outline-secondary btn-sm mb-2"><i class="fas fa-angle-double-left"></i></a></div>
+        <div class="mb-2">Return to reports <a href="https://tashaford.github.io/manager_interactive_wireframe/reports.html" class="btn btn-outline-secondary mb-2"><i class="fas fa-angle-double-left"></i></a></div>
         <div class="row">
             <div class="col-md-4 col-lg-4 mb-2">
                 Print report<br>
-                <button type="button" href="#" class="btn btn-outline-secondary btn-sm">Print</button>
+                <button type="button" href="#" class="btn btn-outline-secondary">Print</button>
             </div>
             <div class="col-md-3 col-lg-3 mb-2">         
                 Download report as a PDF<br>
-                <a href="#" class="btn btn-outline-secondary btn-sm">PDF</a>
+                <a href="#" class="btn btn-outline-secondary">PDF</a>
             </div>
             <div class="col-md-4 col-lg-4 mb-2">         
                 Download report as a Excel spreadsheet<br>
-                <a href="#" class="btn btn-outline-secondary btn-sm">Excel</a>
+                <a href="#" class="btn btn-outline-secondary">Excel</a>
             </div>
         </div>
         <div class="row mt-4">
@@ -87,7 +94,7 @@
                 </table>
             </div>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-secondary btn-sm mt-2 mb-4" data-toggle="modal" data-target="#modal">
+            <button type="button" class="btn btn-outline-secondary mt-2 mb-4" data-toggle="modal" data-target="#modal">
                 View barchart
             </button>
             <!-- Modal -->
