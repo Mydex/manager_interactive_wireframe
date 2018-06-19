@@ -258,104 +258,124 @@
                 </td>
                 <td>Family First : Name Fifty-nine</td>
                 <td>
-
+                  <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseNotes7" aria-expanded="false" aria-controls="collapseNotes7">View</button>
+                  <div class="collapse" id="collapseNotes7" aria-labelledby="headingNotes7">
+                    <div class="card card-body">
+                      <h6>Notes</h6>
+                      <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
+                    </div>
+                  </div>
                 </td>
-              </tr>
+              </td>
+            </tr>
 
-              <tr>
-                <td><u><a href="https://mydex.github.io/manager_interactive_wireframe/client_profile.html" class="text-info">Citizen 22</a></u></td>
-                <td><u><a href="https://mydex.github.io/manager_interactive_wireframe/client_profile.html" class="text-info">Twenty-Two</a></u></td>
-                <td>Energy Advocate 2</td>
-                <td>12 Fake Street<br>FakeTown</td>
-                <td>04/04/2018</td>
-                <td>
-                  <form action="#">
-                    <select name="refType">
-                      <option value="Active">Active</option>
-                      <option value="Reactivated">Reactivated</option>
-                      <option value="Referral">Referral</option>
-                      <option value="Rereferral">Rereferral</option>
-                      <option value="Notactive" selected="selected">Not active</option>
-                    </select>
-                  </form>
-                </td>
-                <td>RAMH : Name Thirty-eight</td>
-                <td>
+            <tr>
+              <td><u><a href="https://mydex.github.io/manager_interactive_wireframe/client_profile.html" class="text-info">Citizen 22</a></u></td>
+              <td><u><a href="https://mydex.github.io/manager_interactive_wireframe/client_profile.html" class="text-info">Twenty-Two</a></u></td>
+              <td>Energy Advocate 2</td>
+              <td>12 Fake Street<br>FakeTown</td>
+              <td>04/04/2018</td>
+              <td>
+                <form action="#">
+                  <select name="refType">
+                    <option value="Active">Active</option>
+                    <option value="Reactivated">Reactivated</option>
+                    <option value="Referral">Referral</option>
+                    <option value="Rereferral">Rereferral</option>
+                    <option value="Notactive" selected="selected">Not active</option>
+                  </select>
+                </form>
+              </td>
+              <td>RAMH : Name Thirty-eight</td>
+              <td>
+                <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseNotes8" aria-expanded="false" aria-controls="collapseNotes8">View</button>
+                <div class="collapse" id="collapseNotes8" aria-labelledby="headingNotes8">
+                  <div class="card card-body">
+                    <h6>Notes</h6>
+                    <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
+                  </div>
+                </div>
+              </td>
+            </tr>
 
-                </td>
-              </tr>
+            <tr>
+              <td><u><a href="https://mydex.github.io/manager_interactive_wireframe/client_profile.html" class="text-info">Citizen 8</a></u></td>
+              <td><u><a href="https://mydex.github.io/manager_interactive_wireframe/client_profile.html" class="text-info">Eight</a></u></td>
+              <td>Energy Advocate 1</td>
+              <td>12 Fake Street<br>FakeTown</td>
+              <td>06/06/2018</td>
+              <td>
+                <form action="#">
+                  <select name="refType">
+                    <option value="Active">Active</option>
+                    <option value="Reactivated" selected="selected">Reactivated</option>
+                    <option value="Referral">Referral</option>
+                    <option value="Rereferral">Rereferral</option>
+                    <option value="Notactive">Not active</option>
+                  </select>
+                </form>
+              </td>
+              <td>Council : Name Sixty</td>
+              <td>
+                <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseNotes9" aria-expanded="false" aria-controls="collapseNotes9">View</button>
+                <div class="collapse" id="collapseNotes9" aria-labelledby="headingNotes9">
+                  <div class="card card-body">
+                    <h6>Notes</h6>
+                    <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
+                  </div>
+                </div>
 
-              <tr>
-                <td><u><a href="https://mydex.github.io/manager_interactive_wireframe/client_profile.html" class="text-info">Citizen 8</a></u></td>
-                <td><u><a href="https://mydex.github.io/manager_interactive_wireframe/client_profile.html" class="text-info">Eight</a></u></td>
-                <td>Energy Advocate 1</td>
-                <td>12 Fake Street<br>FakeTown</td>
-                <td>06/06/2018</td>
-                <td>
-                  <form action="#">
-                    <select name="refType">
-                      <option value="Active">Active</option>
-                      <option value="Reactivated" selected="selected">Reactivated</option>
-                      <option value="Referral">Referral</option>
-                      <option value="Rereferral">Rereferral</option>
-                      <option value="Notactive">Not active</option>
-                    </select>
-                  </form>
-                </td>
-                <td>Council : Name Sixty</td>
-                <td>
+              </td>
+            </tr>
 
-                </td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
+          </tbody>
+        </table>
       </div>
     </div>
-  </main>
+  </div>
+</main>
 
-  <script>
-    (function(document) {
-      'use strict';
-      var TableFilter = (function(Arr) {
-        var input;
+<script>
+  (function(document) {
+    'use strict';
+    var TableFilter = (function(Arr) {
+      var input;
 
-        function onInputEvent(e) {
-          input = e.target;
-          var tables = document.getElementsByClassName(input.getAttribute('data-table'));
-          Arr.forEach.call(tables, function(table) {
-            Arr.forEach.call(table.tBodies, function(tbody) {
-              Arr.forEach.call(tbody.rows, filterRow);
-            });
+      function onInputEvent(e) {
+        input = e.target;
+        var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+        Arr.forEach.call(tables, function(table) {
+          Arr.forEach.call(table.tBodies, function(tbody) {
+            Arr.forEach.call(tbody.rows, filterRow);
+          });
+        });
+      }
+
+      function filterRow(row) {
+        var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
+        row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+      }
+
+      return {
+        init: function() {
+          var inputs = document.getElementsByClassName('tableFilter');
+          Arr.forEach.call(inputs, function(input) {
+            input.oninput = onInputEvent;
           });
         }
+      };
+    })(Array.prototype);
 
-        function filterRow(row) {
-          var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
-          row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-        }
+    document.addEventListener('readystatechange', function() {
+      if (document.readyState === 'complete') {
+        TableFilter.init();
+      }
+    });
 
-        return {
-          init: function() {
-            var inputs = document.getElementsByClassName('tableFilter');
-            Arr.forEach.call(inputs, function(input) {
-              input.oninput = onInputEvent;
-            });
-          }
-        };
-      })(Array.prototype);
+  })(document);
+</script>
 
-      document.addEventListener('readystatechange', function() {
-        if (document.readyState === 'complete') {
-          TableFilter.init();
-        }
-      });
-
-    })(document);
-  </script>
-
-  <script>
+<script>
     // For sorting tables
     var compare = {
       name: function(a, b) {
