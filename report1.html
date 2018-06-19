@@ -63,61 +63,60 @@
         </div>
 
         <div id="module" class="container row mt-3">
-          <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseHeating" aria-expanded="false" aria-controls="collapseHeating">Heating & Energy</a></h5>
-          <div class="collapse col-12" id="collapseHeating" aria-labelledby="headingHeating">
-             <div class="card card-body">
-                <h4 class="mb-2">Calendar savings</h4>
-                <div class="table-responsive">
-                 <table class="table table-striped table-bordered table-sm text-left">
-                    <thead class="bg-success">
-                        <tr>
-                            <td>Year</td>
-                            <td>General</td>
-                            <td>Capital</td>
-                            <td>Total</td>
-                            <td>Total number of initial home visits made</td>
-                            <td>Number of further visits</td>
-                            <td>Associated carbon savings (kg CO2)</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2018</td>
-                            <td class="text-right">£3128</td>
-                            <td class="text-right">23</td>
-                        </tr>
-                        <tr>
-                            <td>2017</td>
-                            <td class="text-right">£2522</td>
-                            <td class="text-right">20</td>
-                        </tr>
-                        <tr>
-                            <td>2016</td>
-                            <td class="text-right">£2270</td>
-                            <td class="text-right">12</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-outline-secondary mt-2 mb-4" data-toggle="modal" data-target="#modal" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-                    View barchart
-                </button>
-                <!-- Modal -->
-                <div class="modal fade " id="modal" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="label">Compare Savings per Year</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="https://mydex.github.io/manager_interactive_wireframe/images/compare_calendar.png" class="rounded" alt="logo" width="100%">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                </div>
+          <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSavings" aria-expanded="false" aria-controls="collapseSavings">Heating & Energy</a></h5>
+          <div class="collapse col-12" id="collapseSavings" aria-labelledby="headingSavings">
+           <div class="card card-body">
+            <h4 class="mb-2">Calendar savings</h4>
+            <div class="table-responsive">
+               <table class="table table-striped table-bordered table-sm text-left">
+                <thead class="bg-success">
+                    <tr>
+                        <td>Year</td>
+                        <td>General</td>
+                        <td>Capital</td>
+                        <td>Total</td>
+                        <td>Total number of initial home visits made</td>
+                        <td>Number of further visits</td>
+                        <td>Associated carbon savings (kg CO2)</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2018</td>
+                        <td class="text-right">£3128</td>
+                        <td class="text-right">23</td>
+                    </tr>
+                    <tr>
+                        <td>2017</td>
+                        <td class="text-right">£2522</td>
+                        <td class="text-right">20</td>
+                    </tr>
+                    <tr>
+                        <td>2016</td>
+                        <td class="text-right">£2270</td>
+                        <td class="text-right">12</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-secondary mt-2 mb-4" data-toggle="modal" data-target="#modal" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
+                View barchart
+            </button>
+            <!-- Modal -->
+            <div class="modal fade " id="modal" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="label">Compare Savings per Year</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                <img src="https://mydex.github.io/manager_interactive_wireframe/images/compare_calendar.png" class="rounded" alt="logo" width="100%">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -125,10 +124,11 @@
 </div>
 </div>
 </div>
+</div>
 
 <h4 class="mb-2">Financial year savings</h4>
 <div class="table-responsive">
- <table class="table table-striped table-bordered table-sm text-left">
+   <table class="table table-striped table-bordered table-sm text-left">
     <thead class="bg-success">
         <tr>
             <td>Year</td>
@@ -174,7 +174,7 @@
 </div>
 
 <div class="table-responsive">
- <table class="table table-striped table-bordered table-sm text-left">
+   <table class="table table-striped table-bordered table-sm text-left">
     <thead class="bg-success">
         <tr>
             <td>Total Savings</td>
