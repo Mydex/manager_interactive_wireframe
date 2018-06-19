@@ -97,68 +97,52 @@
                         </tr>
                     </tbody>
                 </table>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-outline-secondary mt-2 mb-4" data-toggle="modal" data-target="#modal" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-                    View barchart
-                </button>
-                <!-- Modal -->
-                <div class="modal fade " id="modal" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="label">Compare Savings per Year</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="https://mydex.github.io/manager_interactive_wireframe/images/compare_calendar.png" class="rounded" alt="logo" width="100%">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+
+                <div id="module" class="container row mt-3">
+                    <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseBarchart" aria-expanded="false" aria-controls="collapseBarchart">View barchart</a></h4>
+                    <div class="collapse col-12" id="collapseBarchart" aria-labelledby="headingBarchart">
+                        <h5>Compare Savings per Year</h5>
+                        <img src="https://mydex.github.io/manager_interactive_wireframe/images/compare_calendar.png" class="rounded" alt="logo" width="100%">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
-</div>
-</div>
 
 
-<div id="module" class="container row mt-3">
-    <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFinancial" aria-expanded="false" aria-controls="collapseFinancial">Financial year savings</a></h4>
-    <div class="collapse col-12" id="collapseFinancial" aria-labelledby="headingFinancial">
-       <div class="card card-body">
-        <div class="table-responsive">
-           <table class="table table-striped table-bordered table-sm text-left">
-            <thead class="bg-success">
-                <tr>
-                    <td>Year</td>
-                    <td>Total Savings per Year</td>
-                    <td>Total number of active Clients</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2018</td>
-                    <td class="text-right">£3000</td>
-                    <td class="text-right">25</td>
-                </tr>
-                <tr>
-                    <td>2017</td>
-                    <td class="text-right">£2000</td>
-                    <td class="text-right">19</td>
-                </tr>
-                <tr>
-                    <td>2016</td>
-                    <td class="text-right">£1900</td>
-                    <td class="text-right">15</td>
-                </tr>
-            </tbody>
-        </table>
+    <div id="module" class="container row mt-3">
+        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFinancial" aria-expanded="false" aria-controls="collapseFinancial">Financial year savings</a></h4>
+        <div class="collapse col-12" id="collapseFinancial" aria-labelledby="headingFinancial">
+           <div class="card card-body">
+            <div class="table-responsive">
+               <table class="table table-striped table-bordered table-sm text-left">
+                <thead class="bg-success">
+                    <tr>
+                        <td>Year</td>
+                        <td>Total Savings per Year</td>
+                        <td>Total number of active Clients</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2018</td>
+                        <td class="text-right">£3000</td>
+                        <td class="text-right">25</td>
+                    </tr>
+                    <tr>
+                        <td>2017</td>
+                        <td class="text-right">£2000</td>
+                        <td class="text-right">19</td>
+                    </tr>
+                    <tr>
+                        <td>2016</td>
+                        <td class="text-right">£1900</td>
+                        <td class="text-right">15</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
 </div>
 </div>
 
