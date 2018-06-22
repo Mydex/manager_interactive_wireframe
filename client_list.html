@@ -321,11 +321,12 @@
 <script>
 
   function checkData(textBox, buttonName) {
-    console.log(textBox.innerHTML);
-    if (textBox.innerHTML === "Add any important notes here...") {
-      document.getElementById(buttonName).dataset.text = 'View';
-    } else {
+    var textBoxContent = document.getElementById(textBox).innerHTML;
+    console.log(textBoxContent);
+    if (textBoxContent === "Add any important notes here...") {
       document.getElementById(buttonName).dataset.text = 'Add';
+    } else {
+      document.getElementById(buttonName).dataset.text = 'View';
     }
   }
 
