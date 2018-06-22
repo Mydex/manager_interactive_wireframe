@@ -293,11 +293,11 @@
               </form>
             </td>
             <td>Council <br> Name Sixty</td>
-            <td onload="checkData('notes9', 'button9');">
+            <td>
               <div id="notes">
                 <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes9" aria-expanded="false" aria-controls="collapseNotes9" onclick="checkData('notes9', 'button9');" id="button9" data-text="Add"></button>
                 <div class="collapse" id="collapseNotes9" aria-labelledby="headingNotes9">
-                  <textarea rows="3" id="notes9">Add any important notes here...</textarea>
+                  <div rows="3" id="notes9">Add any important notes here...</div>
                 </div>
               </div>
             </td>
@@ -320,10 +320,10 @@
 
 <script>
 
-  function checkData(textBox, buttonName) {
-    var textBoxContent = document.getElementById(textBox).innerHTML;
-    console.log(textBoxContent);
-    if (textBoxContent === "Add any important notes here...") {
+  function checkData(text, buttonName) {
+    var texContent = document.getElementById(tex).innerHTML;
+    console.log(textContent);
+    if (textContent === "Add any important notes here...") {
       document.getElementById(buttonName).dataset.text = 'Add';
     } else {
       document.getElementById(buttonName).dataset.text = 'View';
