@@ -71,15 +71,25 @@
           <div class="col-12">
             <input type="search" class="tableFilter form-control col-4" spellcheck="true" data-table="order-table" placeholder="Filter table here...">
             <div class="table-responsive">
-              <table class="order-table table table-sm table-bordered text-left">
+              <table class="order-table table table-sm table-bordered text-left" id="countit1">
                 <thead>
                   <tr>
-                    <th>Heading</th>
+                    <th>Information</th>
+                    <th>Value</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>info</td>
+                    <td></td>
+                    <td class="count">9</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td class="count">9</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td class="count">9</td>
                   </tr>
                 </tbody>
                 <tfoot>
@@ -114,6 +124,18 @@
     </div>
   </div>
 </main>
+
+
+<script language="javascript" type="text/javascript">
+  var tds = document.getElementById('countit1').getElementsByTagName('td');
+  var sum = 0;
+  for(var i = 0; i < tds.length; i ++) {
+    if(tds[i].className == 'count-me') {
+      sum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+    }
+  }
+  document.getElementById('countit').innerHTML += '<tr><td>' + sum + '</td><td>total</td></tr>';
+</script>
 
 <style>
 #line {
