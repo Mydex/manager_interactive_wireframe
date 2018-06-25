@@ -92,7 +92,7 @@
                     <td class="count">3</td>
                   </tr>
                 </tbody>
-                <tfoot>
+                <tfoot id="countitfooter">
                   <tr>
                     <th>Total:</th>
                   </tr>
@@ -134,7 +134,7 @@
       sum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
     }
   }
-  document.getElementById('countit1').innerHTML += '<tr><td>' + sum + '</td><td>total</td></tr>';
+  document.getElementById('countitfooter').innerHTML += '<tr><td>' + sum + '</td><td>total</td></tr>';
 </script>
 
 <style>
