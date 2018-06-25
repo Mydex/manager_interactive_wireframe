@@ -145,10 +145,8 @@
   var tds = document.getElementById('countit1').getElementsByTagName('td');
   var sum = 0;
   for(var i = 0; i < tds.length; i ++) {
-    if (tds.style.display === 'table-row') {
-      if(tds[i].className == 'count') {
-        sum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
-      }
+    if(tds[i].className == 'count') {
+      sum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
     }
   }
   document.getElementById('countitfooter').innerHTML += '<tr><th>Total</th><td>' + sum + '</td></tr>';
