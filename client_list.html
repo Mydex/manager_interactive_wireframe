@@ -351,7 +351,19 @@
     console.log(document.getElementById(buttonName).dataset.text);
   }
 
-  window.onload = checkData('notes8', 'button8'); 
+  function start(){
+    checkData('notes1', 'button1');
+    checkData('notes2', 'button2');
+    checkData('notes3', 'button3');
+    checkData('notes4', 'button4');
+    checkData('notes5', 'button5');
+    checkData('notes6', 'button6');
+    checkData('notes7', 'button7');
+    checkData('notes8', 'button8');
+    checkData('notes9', 'button9');
+  }
+
+  window.onload = start();
 
   (function(document) {
     'use strict';
