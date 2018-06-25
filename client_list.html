@@ -318,11 +318,6 @@
 </style>
 
 <script>
-  $(document).ready(checkData('notes9', 'button9'))
-</script>
-
-<script>
-  // window.onload = checkData('notes9', 'button9');
 
   function checkData(text, buttonName) {
     var textContent = document.getElementById(text).innerHTML;
@@ -335,6 +330,7 @@
     console.log(document.getElementById(buttonName).dataset.text);
   }
 
+  window.onload = checkData('notes9', 'button9');
 
   (function(document) {
     'use strict';
