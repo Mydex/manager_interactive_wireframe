@@ -55,15 +55,14 @@
         </p>
       </div>
       <div>Choose a postcode or ward below to view data</div>
-      <form action="#/">
-        <select name="pickPostcode" onchange="showTablePostcode(this.options[this.selectedIndex].value)" required>
-          <option value="default"></option>
-          <option value="PA1">PA1</option>
-          <option value="PA2">PA2</option>
-          <option value="PA3">PA3</option>
-          <option value="PA4">PA4</option>
-        </select>
-      </form>
+      <h5>Postcode</h5>
+      <select name="pickPostcode" onchange="showTablePostcode(this.options[this.selectedIndex].value)" required>
+        <option value="default"></option>
+        <option value="PA1">PA1</option>
+        <option value="PA2">PA2</option>
+        <option value="PA3">PA3</option>
+        <option value="PA4">PA4</option>
+      </select>
       <form action="#/">
         <select name="pickWard" onchange="showTableWard(this.options[this.selectedIndex].value)" required>
           <option value="default"></option>
