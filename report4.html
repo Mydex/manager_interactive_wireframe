@@ -55,7 +55,7 @@
         </p>
       </div>
       <div>Choose a postcode or ward below to view data</div>
-      <h5>Postcode</h5>
+      <h5 class="mt-2 mb-1">Postcode</h5>
       <select name="pickPostcode" onchange="showTablePostcode(this.options[this.selectedIndex].value)" required>
         <option value="default"></option>
         <option value="PA1">PA1</option>
@@ -63,21 +63,20 @@
         <option value="PA3">PA3</option>
         <option value="PA4">PA4</option>
       </select>
-      <form action="#/">
-        <select name="pickWard" onchange="showTableWard(this.options[this.selectedIndex].value)" required>
-          <option value="default"></option>
-          <option value="Ward1">Ward 1 : Renfrew North and Braehead</option>
-          <option value="Ward2">Ward 2 : Renfrew South and Gallowhill</option>
-          <option value="Ward3">Ward 3 : Paisley Northeast and Ralston</option>
-          <option value="Ward4">Ward 4 : Paisley Northwest</option>
-          <option value="Ward5">Ward 5 : Paisley East and Central</option>
-          <option value="Ward6">Ward 6 : Paisley Southeast</option>
-          <option value="Ward7">Ward 7 : Paisley Southwest</option>
-          <option value="Ward8">Ward 8 : Johnstone South and Elderslie</option>
-          <option value="Ward9">Ward 9 : Johnstone North, Kilbarchan, Howwood and Lochwinnoch</option>
-          <option value="Ward10">Ward 10 : Houston, Crosslee and Linwood</option>
-        </select>
-      </form>
+      <h5 class="mt-2 mb-1">Ward</h5>
+      <select name="pickWard" onchange="showTableWard(this.options[this.selectedIndex].value)" required>
+        <option value="default"></option>
+        <option value="Ward1">Ward 1 : Renfrew North and Braehead</option>
+        <option value="Ward2">Ward 2 : Renfrew South and Gallowhill</option>
+        <option value="Ward3">Ward 3 : Paisley Northeast and Ralston</option>
+        <option value="Ward4">Ward 4 : Paisley Northwest</option>
+        <option value="Ward5">Ward 5 : Paisley East and Central</option>
+        <option value="Ward6">Ward 6 : Paisley Southeast</option>
+        <option value="Ward7">Ward 7 : Paisley Southwest</option>
+        <option value="Ward8">Ward 8 : Johnstone South and Elderslie</option>
+        <option value="Ward9">Ward 9 : Johnstone North, Kilbarchan, Howwood and Lochwinnoch</option>
+        <option value="Ward10">Ward 10 : Houston, Crosslee and Linwood</option>
+      </select>
 
 
       <div id="pa1Content" style="display: none;">
