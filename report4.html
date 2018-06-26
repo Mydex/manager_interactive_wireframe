@@ -54,8 +54,9 @@
           Return to reports <a href="https://mydex.github.io/manager_interactive_wireframe/reports.html" class="btn btn-outline-secondary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/double-arrow.png" alt="logo" width="20"></a>
         </p>
       </div>
+      <div>Choose a postcode or ward below to view data</div>
       <form action="#/">
-        <select name="pickPostcode" onchange="showTable(this.options[this.selectedIndex].value)" required>
+        <select name="pickPostcode" onchange="showTablePostcode(this.options[this.selectedIndex].value)" required>
           <option value="default"></option>
           <option value="PA1">PA1</option>
           <option value="PA2">PA2</option>
@@ -63,9 +64,25 @@
           <option value="PA4">PA4</option>
         </select>
       </form>
+      <form action="#/">
+        <select name="pickWard" onchange="showTableWard(this.options[this.selectedIndex].value)" required>
+          <option value="default"></option>
+          <option value="Ward1">Ward 1 : Renfrew North and Braehead</option>
+          <option value="Ward2">Ward 2 : Renfrew South and Gallowhill</option>
+          <option value="Ward3">Ward 3 : Paisley Northeast and Ralston</option>
+          <option value="Ward4">Ward 4 : Paisley Northwest</option>
+          <option value="Ward5">Ward 5 : Paisley East and Central</option>
+          <option value="Ward6">Ward 6 : Paisley Southeast</option>
+          <option value="Ward7">Ward 7 : Paisley Southwest</option>
+          <option value="Ward8">Ward 8 : Johnstone South and Elderslie</option>
+          <option value="Ward9">Ward 9 : Johnstone North, Kilbarchan, Howwood and Lochwinnoch</option>
+          <option value="Ward10">Ward 10 : Houston, Crosslee and Linwood</option>
+        </select>
+      </form>
 
 
       <div id="pa1Content" style="display: none;">
+        <h4>Postcode: PA1</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
@@ -133,15 +150,238 @@
       </div>
 
       <div id="pa2Content" style="display: none;">
-        <div>PA2</div>
+        <h4>Postcode: PA2</h4>
+        <div class="col-12 col-md-6 col-lg-6 p-0">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <tbody>
+                <tr>
+                  <th class="bg-light">Total number of Clients</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">New Clients</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Stats from client status<br>
+                    <li>Active</li>
+                    <li>Reactivated</li>
+                    <li>Referral</li>
+                    <li>Rereferral</li>
+                    <li>Not active</li>
+                  </th>
+                  <td>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 p-0">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <tbody>
+                <tr>
+                  <th class="bg-light">General</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Capital</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Total</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">No of initial home visits</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">No of further visits</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Associated carbon savings</th>
+                  <td class="text-right">£</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
 
       <div id="pa3Content" style="display: none;">
-        <div>PA3</div>
+        <h4>Postcode: PA3</h4>
+        <div class="col-12 col-md-6 col-lg-6 p-0">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <tbody>
+                <tr>
+                  <th class="bg-light">Total number of Clients</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">New Clients</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Stats from client status<br>
+                    <li>Active</li>
+                    <li>Reactivated</li>
+                    <li>Referral</li>
+                    <li>Rereferral</li>
+                    <li>Not active</li>
+                  </th>
+                  <td>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 p-0">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <tbody>
+                <tr>
+                  <th class="bg-light">General</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Capital</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Total</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">No of initial home visits</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">No of further visits</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Associated carbon savings</th>
+                  <td class="text-right">£</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
 
       <div id="pa4Content" style="display: none;">
-        <div>PA4</div>
+        <h4>Postcode: PA4</h4>
+        <div class="col-12 col-md-6 col-lg-6 p-0">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <tbody>
+                <tr>
+                  <th class="bg-light">Total number of Clients</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">New Clients</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Stats from client status<br>
+                    <li>Active</li>
+                    <li>Reactivated</li>
+                    <li>Referral</li>
+                    <li>Rereferral</li>
+                    <li>Not active</li>
+                  </th>
+                  <td>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 p-0">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <tbody>
+                <tr>
+                  <th class="bg-light">General</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Capital</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Total</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">No of initial home visits</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">No of further visits</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Associated carbon savings</th>
+                  <td class="text-right">£</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="ward1Content" style="display: none;">
+        <div>Ward1</div>
+      </div>
+      <div id="ward2Content" style="display: none;">
+        <div>Ward2</div>
+      </div>      
+      <div id="ward3Content" style="display: none;">
+        <div>Ward3</div>
+      </div>      
+      <div id="ward4Content" style="display: none;">
+        <div>Ward4</div>
+      </div>      
+      <div id="ward5Content" style="display: none;">
+        <div>Ward5</div>
+      </div>
+      <div id="ward6Content" style="display: none;">
+        <div>Ward6</div>
+      </div>
+      <div id="ward7Content" style="display: none;">
+        <div>Ward7</div>
+      </div>
+      <div id="ward8Content" style="display: none;">
+        <div>Ward8</div>
+      </div>
+      <div id="ward9Content" style="display: none;">
+        <div>Ward9</div>
+      </div>
+      <div id="ward10Content" style="display: none;">
+        <div>Ward10</div>
       </div>
 
       <!-- <div id="module" class="row mx-1">
