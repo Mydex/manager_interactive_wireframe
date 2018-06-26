@@ -54,524 +54,164 @@
           Return to reports <a href="https://mydex.github.io/manager_interactive_wireframe/reports.html" class="btn btn-outline-secondary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/double-arrow.png" alt="logo" width="20"></a>
         </p>
       </div>
-      <div>Choose a postcode or ward below to view data</div>
-      <h5 class="mt-3 mb-1">Postcode</h5>
-      <select name="pickPostcode" onchange="showTablePostcode(this.options[this.selectedIndex].value)" required>
-        <option value="default"></option>
-        <option value="all">All postcodes</option>
-        <option value="PA1">PA1</option>
-        <option value="PA2">PA2</option>
-        <option value="PA3">PA3</option>
-        <option value="PA4">PA4</option>
-      </select>
-      <h5 class="mt-3 mb-1">Ward</h5>
-      <select name="pickWard" onchange="showTableWard(this.options[this.selectedIndex].value)" required>
-        <option value="default"></option>
-        <option value="all">All wards</option>
-        <option value="Ward1">Ward 1</option>
-        <option value="Ward2">Ward 2</option>
-        <option value="Ward3">Ward 3</option>
-        <option value="Ward4">Ward 4</option>
-        <option value="Ward5">Ward 5</option>
-        <option value="Ward6">Ward 6</option>
-        <option value="Ward7">Ward 7</option>
-        <option value="Ward8">Ward 8</option>
-        <option value="Ward9">Ward 9</option>
-        <option value="Ward10">Ward 10</option>
-      </select>
+      
 
-
-      <div id="allPostcodeContent" style="display: none;">
-        <h4 class="mt-4">All postcodes</h4>
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
+      <div id="module" class="row mx-1">
+        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProject1" aria-expanded="false" aria-controls="collapseProject1">One</a></h4>
+        <div class="collapse col-12 p-0" id="collapseProject1" aria-labelledby="headingProject1">
+          <div class="col-12">
+            <input type="search" class="tableFilter form-control col-4" spellcheck="true" data-table="order-table" placeholder="Filter table here...">
+            <div class="table-responsive">
+              <table class="table table-sm text-left">
+                <tbody>
+                  <tr>
+                    <td>Start date:</td>
+                    <td>End date:</td>
+                  </tr>
+                  <tr>
+                    <td><input type="date" name="start" value="2018-01-01"></td>
+                    <td><input type="date" name="end" value="2019-01-01"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-        <div class="col-12 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <thead>
-                <tr>
-                  <th rowspan="2" class="bg-light">Postcode</th>
-                  <th rowspan="2" class="bg-light">Total number of Clients</th>
-                  <th rowspan="2" class="bg-light">New Clients</th>
-                  <th colspan="5" class="bg-light">Stats from client status</th>
-                </tr>
-                <tr>
-                  <th class="bg-light">Active</th>
-                  <th class="bg-light">Reactivated</th>
-                  <th class="bg-light">Referral</th>
-                  <th class="bg-light">Rereferral</th>
-                  <th class="bg-light">Not active</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>PA1</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>PA2</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>PA3</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>PA4</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="col-12 p-0">
+            <div class="table-responsive">
+              <table class="table table-sm table-bordered text-left">
+                <thead>
+                  <tr>
+                    <th rowspan="2" class="bg-light">Postcode</th>
+                    <th rowspan="2" class="bg-light">Total number of Clients</th>
+                    <th rowspan="2" class="bg-light">New Clients</th>
+                    <th colspan="5" class="bg-light">Stats from client status</th>
+                  </tr>
+                  <tr>
+                    <th class="bg-light">Active</th>
+                    <th class="bg-light">Reactivated</th>
+                    <th class="bg-light">Referral</th>
+                    <th class="bg-light">Rereferral</th>
+                    <th class="bg-light">Not active</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>PA1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>PA2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>PA3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>PA4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-        <div class="col-12 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <thead>
-                <th class="bg-light">Postcode</th>
-                <th class="bg-light">General</th>
-                <th class="bg-light">Capital</th>
-                <th class="bg-light">Total</th>
-                <th class="bg-light">No of initial home visits</th>
-                <th class="bg-light">No of further visits</th>
-                <th class="bg-light">Associated carbon savings</th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>PA1</td>
-                  <td class="text-right">£</td>
-                  <td class="text-right">£</td>
-                  <td class="text-right">£</td>
-                  <td></td>
-                  <td></td>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <td>PA2</td>
-                  <td class="text-right">£</td>
-                  <td class="text-right">£</td>
-                  <td class="text-right">£</td>
-                  <td></td>
-                  <td></td>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <td>PA3</td>
-                  <td class="text-right">£</td>
-                  <td class="text-right">£</td>
-                  <td class="text-right">£</td>
-                  <td></td>
-                  <td></td>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <td>PA4</td>
-                  <td class="text-right">£</td>
-                  <td class="text-right">£</td>
-                  <td class="text-right">£</td>
-                  <td></td>
-                  <td></td>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-
-      <div id="pa1Content" style="display: none;">
-        <h4 class="mt-4">Postcode: PA1</h4>
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">Total number of Clients</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">New Clients</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Stats from client status<br>
-                    <li>Active</li>
-                    <li>Reactivated</li>
-                    <li>Referral</li>
-                    <li>Rereferral</li>
-                    <li>Not active</li>
-                  </th>
-                  <td>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
+          <div class="col-12 p-0">
+            <div class="table-responsive">
+              <table class="table table-sm table-bordered text-left">
+                <thead>
+                  <th class="bg-light">Postcode</th>
                   <th class="bg-light">General</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
                   <th class="bg-light">Capital</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
                   <th class="bg-light">Total</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
                   <th class="bg-light">No of initial home visits</th>
-                  <td></td>
-                </tr>
-                <tr>
                   <th class="bg-light">No of further visits</th>
-                  <td></td>
-                </tr>
-                <tr>
                   <th class="bg-light">Associated carbon savings</th>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>PA1</td>
+                    <td class="text-right">£</td>
+                    <td class="text-right">£</td>
+                    <td class="text-right">£</td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-right">£</td>
+                  </tr>
+                  <tr>
+                    <td>PA2</td>
+                    <td class="text-right">£</td>
+                    <td class="text-right">£</td>
+                    <td class="text-right">£</td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-right">£</td>
+                  </tr>
+                  <tr>
+                    <td>PA3</td>
+                    <td class="text-right">£</td>
+                    <td class="text-right">£</td>
+                    <td class="text-right">£</td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-right">£</td>
+                  </tr>
+                  <tr>
+                    <td>PA4</td>
+                    <td class="text-right">£</td>
+                    <td class="text-right">£</td>
+                    <td class="text-right">£</td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-right">£</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-
-      <div id="pa2Content" style="display: none;">
-        <h4 class="mt-4">Postcode: PA2</h4>
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">Total number of Clients</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">New Clients</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Stats from client status<br>
-                    <li>Active</li>
-                    <li>Reactivated</li>
-                    <li>Referral</li>
-                    <li>Rereferral</li>
-                    <li>Not active</li>
-                  </th>
-                  <td>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">General</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Capital</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Total</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of initial home visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of further visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Associated carbon savings</th>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="pa3Content" style="display: none;">
-        <h4 class="mt-4">Postcode: PA3</h4>
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">Total number of Clients</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">New Clients</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Stats from client status<br>
-                    <li>Active</li>
-                    <li>Reactivated</li>
-                    <li>Referral</li>
-                    <li>Rereferral</li>
-                    <li>Not active</li>
-                  </th>
-                  <td>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">General</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Capital</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Total</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of initial home visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of further visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Associated carbon savings</th>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="pa4Content" style="display: none;">
-        <h4 class="mt-4">Postcode: PA4</h4>
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">Total number of Clients</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">New Clients</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Stats from client status<br>
-                    <li>Active</li>
-                    <li>Reactivated</li>
-                    <li>Referral</li>
-                    <li>Rereferral</li>
-                    <li>Not active</li>
-                  </th>
-                  <td>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">General</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Capital</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Total</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of initial home visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of further visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Associated carbon savings</th>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
 
 
 
       <div id="allWardContent" style="display: none;">
         <h4 class="mt-4">All wards</h4>
         <div class="input-group date" data-provide="datepicker">
-            <form action="#">
-                <table>
-                    <tr>
-                        <td>Start date:</td>
-                        <td class="ml-2">End date:</td>
-                    </tr>
-                    <tr>
-                        <td><input type="date" name="start"></td>
-                        <td class="ml-2"><input type="date" name="end"></td>
-                    </tr>
-                </table>
-            </form>
+          <form action="#">
+            <table>
+              <tr>
+                <td>Start date:</td>
+                <td class="ml-2">End date:</td>
+              </tr>
+              <tr>
+                <td><input type="date" name="start"></td>
+                <td class="ml-2"><input type="date" name="end"></td>
+              </tr>
+            </table>
+          </form>
         </div>
         <div class="col-12 p-0">
           <div class="table-responsive">
@@ -811,846 +451,6 @@
       </div>
 
 
-      <div id="ward1Content" style="display: none;">
-        <h4 class="mt-4">Ward 1 : Renfrew North and Braehead</h4>
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">Total number of Clients</th>
-                  <td>49</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">New Clients</th>
-                  <td>11</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Stats from client status<br>
-                    <li>Active</li>
-                    <li>Reactivated</li>
-                    <li>Referral</li>
-                    <li>Rereferral</li>
-                    <li>Not active</li>
-                  </th>
-                  <td>
-                    <br>14
-                    <br>4
-                    <br>11
-                    <br>1
-                    <br>19
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">General</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Capital</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Total</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of initial home visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of further visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Associated carbon savings</th>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="ward2Content" style="display: none;">
-        <h4 class="mt-4">Ward 2 : Renfrew South and Gallowhill</h4>
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">Total number of Clients</th>
-                  <td>58</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">New Clients</th>
-                  <td>9</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Stats from client status<br>
-                    <li>Active</li>
-                    <li>Reactivated</li>
-                    <li>Referral</li>
-                    <li>Rereferral</li>
-                    <li>Not active</li>
-                  </th>
-                  <td>
-                    <br>14
-                    <br>16
-                    <br>9
-                    <br>2
-                    <br>17
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">General</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Capital</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Total</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of initial home visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of further visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Associated carbon savings</th>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="ward3Content" style="display: none;">
-        <h4 class="mt-4">Ward 3 : Paisley Northeast and Ralston</h4>
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">Total number of Clients</th>
-                  <td>33</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">New Clients</th>
-                  <td>8</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Stats from client status<br>
-                    <li>Active</li>
-                    <li>Reactivated</li>
-                    <li>Referral</li>
-                    <li>Rereferral</li>
-                    <li>Not active</li>
-                  </th>
-                  <td>
-                    <br>9
-                    <br>8
-                    <br>2
-                    <br>1
-                    <br>13
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">General</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Capital</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Total</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of initial home visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of further visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Associated carbon savings</th>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="ward4Content" style="display: none;">
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <h4 class="mt-4">Ward 4 : Paisley Northwest</h4>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">Total number of Clients</th>
-                  <td>37</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">New Clients</th>
-                  <td>4</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Stats from client status<br>
-                    <li>Active</li>
-                    <li>Reactivated</li>
-                    <li>Referral</li>
-                    <li>Rereferral</li>
-                    <li>Not active</li>
-                  </th>
-                  <td>
-                    <br>16
-                    <br>4
-                    <br>4
-                    <br>3
-                    <br>10
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">General</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Capital</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Total</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of initial home visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of further visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Associated carbon savings</th>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="ward5Content" style="display: none;">
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <h4 class="mt-4">Ward 5 : Paisley East and Central</h4>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">Total number of Clients</th>
-                  <td>44</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">New Clients</th>
-                  <td>8</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Stats from client status<br>
-                    <li>Active</li>
-                    <li>Reactivated</li>
-                    <li>Referral</li>
-                    <li>Rereferral</li>
-                    <li>Not active</li>
-                  </th>
-                  <td>
-                    <br>6
-                    <br>6
-                    <br>8
-                    <br>3
-                    <br>21
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">General</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Capital</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Total</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of initial home visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of further visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Associated carbon savings</th>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="ward6Content" style="display: none;">
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <h4 class="mt-4">Ward 6 : Paisley Southeast</h4>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">Total number of Clients</th>
-                  <td>29</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">New Clients</th>
-                  <td>4</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Stats from client status<br>
-                    <li>Active</li>
-                    <li>Reactivated</li>
-                    <li>Referral</li>
-                    <li>Rereferral</li>
-                    <li>Not active</li>
-                  </th>
-                  <td>
-                    <br>15
-                    <br>3
-                    <br>4
-                    <br>1
-                    <br>6
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">General</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Capital</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Total</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of initial home visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of further visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Associated carbon savings</th>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="ward7Content" style="display: none;">
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <h4 class="mt-4">Ward 7 : Paisley Southwest</h4>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">Total number of Clients</th>
-                  <td>41</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">New Clients</th>
-                  <td>3</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Stats from client status<br>
-                    <li>Active</li>
-                    <li>Reactivated</li>
-                    <li>Referral</li>
-                    <li>Rereferral</li>
-                    <li>Not active</li>
-                  </th>
-                  <td>
-                    <br>32
-                    <br>2
-                    <br>3
-                    <br>0
-                    <br>4
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">General</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Capital</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Total</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of initial home visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of further visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Associated carbon savings</th>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="ward8Content" style="display: none;">
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <h4 class="mt-4">Ward 8 : Johnstone South and Elderslie</h4>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">Total number of Clients</th>
-                  <td>46</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">New Clients</th>
-                  <td>14</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Stats from client status<br>
-                    <li>Active</li>
-                    <li>Reactivated</li>
-                    <li>Referral</li>
-                    <li>Rereferral</li>
-                    <li>Not active</li>
-                  </th>
-                  <td>
-                    <br>15
-                    <br>4
-                    <br>14
-                    <br>2
-                    <br>11
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">General</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Capital</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Total</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of initial home visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of further visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Associated carbon savings</th>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="ward9Content" style="display: none;">
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <h4 class="mt-4">Ward 9 : Johnstone North, Kilbarchan, Howwood and Lochwinnoch</h4>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">Total number of Clients</th>
-                  <td>39</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">New Clients</th>
-                  <td>7</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Stats from client status<br>
-                    <li>Active</li>
-                    <li>Reactivated</li>
-                    <li>Referral</li>
-                    <li>Rereferral</li>
-                    <li>Not active</li>
-                  </th>
-                  <td>
-                    <br>22
-                    <br>1
-                    <br>7
-                    <br>0
-                    <br>9
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">General</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Capital</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Total</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of initial home visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of further visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Associated carbon savings</th>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="ward10Content" style="display: none;">
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <h4 class="mt-4">Ward 10 : Houston, Crosslee and Linwood</h4>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">Total number of Clients</th>
-                  <td>59</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">New Clients</th>
-                  <td>18</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Stats from client status<br>
-                    <li>Active</li>
-                    <li>Reactivated</li>
-                    <li>Referral</li>
-                    <li>Rereferral</li>
-                    <li>Not active</li>
-                  </th>
-                  <td>
-                    <br>15
-                    <br>12
-                    <br>18
-                    <br>3
-                    <br>11
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 p-0">
-          <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
-              <tbody>
-                <tr>
-                  <th class="bg-light">General</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Capital</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Total</th>
-                  <td class="text-right">£</td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of initial home visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">No of further visits</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th class="bg-light">Associated carbon savings</th>
-                  <td class="text-right">£</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
       <!-- <div id="module" class="row mx-1">
         <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProject1" aria-expanded="false" aria-controls="collapseProject1">One</a></h4>
         <div class="collapse col-12 p-0" id="collapseProject1" aria-labelledby="headingProject1">
@@ -1684,7 +484,7 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
 
      <!--  <div id="module" class="row mx-1">
         <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProject2" aria-expanded="false" aria-controls="collapseProject2">Two</a></h4>
