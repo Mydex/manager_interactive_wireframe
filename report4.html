@@ -559,21 +559,19 @@
 
       <div id="allWardContent" style="display: none;">
         <h4 class="mt-4">All wards</h4>
-        <div class="col-12 row mt-2 mb-1">
-          <div class="table-responsive">
-            <table class="table table-sm text-left">
-              <tbody>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end" value="2019-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="input-group date" data-provide="datepicker">
+            <form action="#">
+                <table>
+                    <tr>
+                        <td>Start date:</td>
+                        <td class="ml-2">End date:</td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="start"></td>
+                        <td class="ml-2"><input type="date" name="end"></td>
+                    </tr>
+                </table>
+            </form>
         </div>
         <div class="col-12 p-0">
           <div class="table-responsive">
