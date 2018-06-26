@@ -75,9 +75,18 @@
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
               <thead class="bg-success">
-                <th>All Clients</th>
-                <th>New Clients</th>
-                <th>Total savings</th>
+                <tr>
+                  <th rowspan="2">All Clients</th>
+                  <th rowspan="2">New Clients</th>
+                  <th colspan="5">Stats from client status</th>
+                </tr>
+                <tr>
+                  <th>Active</th>
+                  <th>Referral</th>
+                  <th>Rereferral</th>
+                  <th>Reactivated</th>
+                  <th>Closed</th>
+                </tr>
               </thead>
               <tbody>
                 <tr class="text-right">
