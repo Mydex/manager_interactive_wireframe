@@ -1733,7 +1733,7 @@
   var tds1 = document.getElementById('countit1').getElementsByTagName('td');
   var sum1 = 0; sum2 = 0; sum3 = 0; sum4 = 0; sum5 = 0; sum6 = 0; sum7 = 0;
   for(var i = 0; i < tds1.length; i ++) {
-    if(tds[i].className == 'count1.1') {
+    if(tds1[i].className == 'count1.1') {
       sum1 += isNaN(tds1[i].innerHTML) ? 0 : parseInt(tds1[i].innerHTML);
     }
   }
