@@ -474,6 +474,130 @@
         </div>
       </div>
 
+
+
+
+      <div id="allWardContent" style="display: none;">
+        <h4 class="mt-4">All wards</h4>
+        <div class="col-12 p-0">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <thead>
+                <tr>
+                  <th rowspan="2" class="bg-light">Postcode</th>
+                  <th rowspan="2" class="bg-light">Total number of Clients</th>
+                  <th rowspan="2" class="bg-light">New Clients</th>
+                  <th colspan="5" class="bg-light">Stats from client status</th>
+                </tr>
+                <tr>
+                  <th class="bg-light">Active</th>
+                  <th class="bg-light">Reactivated</th>
+                  <th class="bg-light">Referral</th>
+                  <th class="bg-light">Rereferral</th>
+                  <th class="bg-light">Not active</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ward 1</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Ward 2</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Ward 3</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Ward 4</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-12 p-0">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <thead>
+                <th class="bg-light">Postcode</th>
+                <th class="bg-light">General</th>
+                <th class="bg-light">Capital</th>
+                <th class="bg-light">Total</th>
+                <th class="bg-light">No of initial home visits</th>
+                <th class="bg-light">No of further visits</th>
+                <th class="bg-light">Associated carbon savings</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ward 1</td>
+                  <td class="text-right">£</td>
+                  <td class="text-right">£</td>
+                  <td class="text-right">£</td>
+                  <td></td>
+                  <td></td>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <td>Ward 2</td>
+                  <td class="text-right">£</td>
+                  <td class="text-right">£</td>
+                  <td class="text-right">£</td>
+                  <td></td>
+                  <td></td>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <td>Ward 3</td>
+                  <td class="text-right">£</td>
+                  <td class="text-right">£</td>
+                  <td class="text-right">£</td>
+                  <td></td>
+                  <td></td>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <td>Ward 4</td>
+                  <td class="text-right">£</td>
+                  <td class="text-right">£</td>
+                  <td class="text-right">£</td>
+                  <td></td>
+                  <td></td>
+                  <td class="text-right">£</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
       <div id="ward1Content" style="display: none;">
         <h4 class="mt-4">Ward 1 : Renfrew North and Braehead</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
@@ -1321,7 +1445,20 @@
 
 
 function showTableWard(name){
-  if(name == 'Ward1'){
+  if(name == 'all'){
+    document.getElementById('allWardContent').style.display = 'block';
+    document.getElementById('ward1Content').style.display = 'none';
+    document.getElementById('ward2Content').style.display = 'none';
+    document.getElementById('ward3Content').style.display = 'none';
+    document.getElementById('ward4Content').style.display = 'none';
+    document.getElementById('ward5Content').style.display = 'none';
+    document.getElementById('ward6Content').style.display = 'none';
+    document.getElementById('ward7Content').style.display = 'none';
+    document.getElementById('ward8Content').style.display = 'none';
+    document.getElementById('ward9Content').style.display = 'none';
+    document.getElementById('ward10Content').style.display = 'none';
+  } else if(name == 'Ward1'){
+    document.getElementById('allWardContent').style.display = 'none';
     document.getElementById('ward1Content').style.display = 'block';
     document.getElementById('ward2Content').style.display = 'none';
     document.getElementById('ward3Content').style.display = 'none';
@@ -1333,6 +1470,7 @@ function showTableWard(name){
     document.getElementById('ward9Content').style.display = 'none';
     document.getElementById('ward10Content').style.display = 'none';
   } else if (name == 'Ward2'){
+    document.getElementById('allWardContent').style.display = 'none';
     document.getElementById('ward1Content').style.display = 'none';
     document.getElementById('ward2Content').style.display = 'block';
     document.getElementById('ward3Content').style.display = 'none';
@@ -1344,6 +1482,7 @@ function showTableWard(name){
     document.getElementById('ward9Content').style.display = 'none';
     document.getElementById('ward10Content').style.display = 'none';
   } else if (name == 'Ward3'){
+    document.getElementById('allWardContent').style.display = 'none';
     document.getElementById('ward1Content').style.display = 'none';
     document.getElementById('ward2Content').style.display = 'none';
     document.getElementById('ward3Content').style.display = 'block';
@@ -1355,6 +1494,7 @@ function showTableWard(name){
     document.getElementById('ward9Content').style.display = 'none';
     document.getElementById('ward10Content').style.display = 'none';
   } else if (name == 'Ward4'){
+    document.getElementById('allWardContent').style.display = 'none';
     document.getElementById('ward1Content').style.display = 'none';
     document.getElementById('ward2Content').style.display = 'none';
     document.getElementById('ward3Content').style.display = 'none';
@@ -1366,6 +1506,7 @@ function showTableWard(name){
     document.getElementById('ward9Content').style.display = 'none';
     document.getElementById('ward10Content').style.display = 'none';
   } else if (name == 'Ward5'){
+    document.getElementById('allWardContent').style.display = 'none';
     document.getElementById('ward1Content').style.display = 'none';
     document.getElementById('ward2Content').style.display = 'none';
     document.getElementById('ward3Content').style.display = 'none';
@@ -1377,6 +1518,7 @@ function showTableWard(name){
     document.getElementById('ward9Content').style.display = 'none';
     document.getElementById('ward10Content').style.display = 'none';
   } else if (name == 'Ward6'){
+    document.getElementById('allWardContent').style.display = 'none';
     document.getElementById('ward1Content').style.display = 'none';
     document.getElementById('ward2Content').style.display = 'none';
     document.getElementById('ward3Content').style.display = 'none';
@@ -1388,6 +1530,7 @@ function showTableWard(name){
     document.getElementById('ward9Content').style.display = 'none';
     document.getElementById('ward10Content').style.display = 'none';
   } else if (name == 'Ward7'){
+   document.getElementById('allWardContent').style.display = 'none';
    document.getElementById('ward1Content').style.display = 'none';
    document.getElementById('ward2Content').style.display = 'none';
    document.getElementById('ward3Content').style.display = 'none';
@@ -1399,6 +1542,7 @@ function showTableWard(name){
    document.getElementById('ward9Content').style.display = 'none';
    document.getElementById('ward10Content').style.display = 'none';
  } else if (name == 'Ward8'){
+  document.getElementById('allWardContent').style.display = 'none';
   document.getElementById('ward1Content').style.display = 'none';
   document.getElementById('ward2Content').style.display = 'none';
   document.getElementById('ward3Content').style.display = 'none';
@@ -1410,6 +1554,7 @@ function showTableWard(name){
   document.getElementById('ward9Content').style.display = 'none';
   document.getElementById('ward10Content').style.display = 'none';
 } else if (name == 'Ward9'){
+  document.getElementById('allWardContent').style.display = 'none';
   document.getElementById('ward1Content').style.display = 'none';
   document.getElementById('ward2Content').style.display = 'none';
   document.getElementById('ward3Content').style.display = 'none';
@@ -1421,6 +1566,7 @@ function showTableWard(name){
   document.getElementById('ward9Content').style.display = 'block';
   document.getElementById('ward10Content').style.display = 'none';
 } else if (name == 'Ward10'){
+  document.getElementById('allWardContent').style.display = 'none';
   document.getElementById('ward1Content').style.display = 'none';
   document.getElementById('ward2Content').style.display = 'none';
   document.getElementById('ward3Content').style.display = 'none';
@@ -1432,6 +1578,7 @@ function showTableWard(name){
   document.getElementById('ward9Content').style.display = 'none';
   document.getElementById('ward10Content').style.display = 'block';
 } else {
+  document.getElementById('allWardContent').style.display = 'none';
   document.getElementById('ward1Content').style.display = 'none';
   document.getElementById('ward2Content').style.display = 'none';
   document.getElementById('ward3Content').style.display = 'none';
