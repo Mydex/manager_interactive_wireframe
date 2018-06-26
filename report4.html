@@ -55,17 +55,19 @@
         </p>
       </div>
       <div>Choose a postcode or ward below to view data</div>
-      <h5 class="mt-2 mb-1">Postcode</h5>
+      <h5 class="mt-3 mb-1">Postcode</h5>
       <select name="pickPostcode" onchange="showTablePostcode(this.options[this.selectedIndex].value)" required>
         <option value="default"></option>
+        <option value="all">All postcodes</option>
         <option value="PA1">PA1</option>
         <option value="PA2">PA2</option>
         <option value="PA3">PA3</option>
         <option value="PA4">PA4</option>
       </select>
-      <h5 class="mt-2 mb-1">Ward</h5>
+      <h5 class="mt-3 mb-1">Ward</h5>
       <select name="pickWard" onchange="showTableWard(this.options[this.selectedIndex].value)" required>
         <option value="default"></option>
+        <option value="all">All wards</option>
         <option value="Ward1">Ward 1 : Renfrew North and Braehead</option>
         <option value="Ward2">Ward 2 : Renfrew South and Gallowhill</option>
         <option value="Ward3">Ward 3 : Paisley Northeast and Ralston</option>
@@ -80,7 +82,7 @@
 
 
       <div id="pa1Content" style="display: none;">
-        <h4>Postcode: PA1</h4>
+        <h4 class="mt-4">Postcode: PA1</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
@@ -148,7 +150,7 @@
       </div>
 
       <div id="pa2Content" style="display: none;">
-        <h4>Postcode: PA2</h4>
+        <h4 class="mt-4">Postcode: PA2</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
@@ -216,7 +218,7 @@
       </div>
 
       <div id="pa3Content" style="display: none;">
-        <h4>Postcode: PA3</h4>
+        <h4 class="mt-4">Postcode: PA3</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
@@ -284,7 +286,7 @@
       </div>
 
       <div id="pa4Content" style="display: none;">
-        <h4>Postcode: PA4</h4>
+        <h4 class="mt-4">Postcode: PA4</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
@@ -352,7 +354,7 @@
       </div>
 
       <div id="ward1Content" style="display: none;">
-        <h4>Ward 1 : Renfrew North and Braehead</h4>
+        <h4 class="mt-4">Ward 1 : Renfrew North and Braehead</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
@@ -420,7 +422,7 @@
       </div>
 
       <div id="ward2Content" style="display: none;">
-        <h4>Ward 2 : Renfrew South and Gallowhill</h4>
+        <h4 class="mt-4">Ward 2 : Renfrew South and Gallowhill</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
@@ -488,7 +490,7 @@
       </div>
 
       <div id="ward3Content" style="display: none;">
-        <h4>Ward 3 : Paisley Northeast and Ralston</h4>
+        <h4 class="mt-4">Ward 3 : Paisley Northeast and Ralston</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
@@ -556,7 +558,7 @@
       </div>
 
       <div id="ward4Content" style="display: none;">
-        <h4>Ward 4 : Paisley Northwest</h4>
+        <h4 class="mt-4">Ward 4 : Paisley Northwest</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
@@ -624,7 +626,7 @@
       </div>
 
       <div id="ward5Content" style="display: none;">
-        <h4>Ward 5 : Paisley East and Central</h4>
+        <h4 class="mt-4">Ward 5 : Paisley East and Central</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
@@ -692,7 +694,7 @@
       </div>
 
       <div id="ward6Content" style="display: none;">
-        <h4>Ward 6 : Paisley Southeast</h4>
+        <h4 class="mt-4">Ward 6 : Paisley Southeast</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
@@ -760,7 +762,7 @@
       </div>
 
       <div id="ward7Content" style="display: none;">
-        <h4>Ward 7 : Paisley Southwest</h4>
+        <h4 class="mt-4">Ward 7 : Paisley Southwest</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
@@ -828,7 +830,7 @@
       </div>
 
       <div id="ward8Content" style="display: none;">
-        <h4>Ward 8 : Johnstone South and Elderslie</h4>
+        <h4 class="mt-4">Ward 8 : Johnstone South and Elderslie</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
@@ -896,7 +898,7 @@
       </div>
 
       <div id="ward9Content" style="display: none;">
-        <h4>Ward 9 : Johnstone North, Kilbarchan, Howwood and Lochwinnoch</h4>
+        <h4 class="mt-4">Ward 9 : Johnstone North, Kilbarchan, Howwood and Lochwinnoch</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
@@ -964,7 +966,7 @@
       </div>
 
       <div id="ward10Content" style="display: none;">
-        <h4>Ward 10 : Houston, Crosslee and Linwood</h4>
+        <h4 class="mt-4">Ward 10 : Houston, Crosslee and Linwood</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
           <div class="table-responsive">
             <table class="table table-sm table-bordered text-left">
