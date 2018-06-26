@@ -81,6 +81,80 @@
       </select>
 
 
+      <div id="allPostcodeContent" style="display: none;">
+        <h4 class="mt-4">All postcodes</h4>
+        <div class="col-12 col-md-6 col-lg-6 p-0">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <thead>
+                <tr>
+                  <th class="bg-light">Postcode</th>
+                  <th class="bg-light">Total number of Clients</th>
+                  <th class="bg-light">New Clients</th>
+                  <th class="bg-light">Stats from client status<br>
+                    <li>Active</li>
+                    <li>Reactivated</li>
+                    <li>Referral</li>
+                    <li>Rereferral</li>
+                    <li>Not active</li>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 p-0">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <tbody>
+                <tr>
+                  <th class="bg-light">General</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Capital</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Total</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">No of initial home visits</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">No of further visits</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Associated carbon savings</th>
+                  <td class="text-right">£</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
       <div id="pa1Content" style="display: none;">
         <h4 class="mt-4">Postcode: PA1</h4>
         <div class="col-12 col-md-6 col-lg-6 p-0">
@@ -1159,148 +1233,49 @@
 
 
   function showTablePostcode(name){
-    if(name == 'PA1'){
+    if(name == 'all'){
+      document.getElementById('allPostcodeContent').style.display = 'block';
+      document.getElementById('pa1Content').style.display = 'none';
+      document.getElementById('pa2Content').style.display = 'none';
+      document.getElementById('pa3Content').style.display = 'none';
+      document.getElementById('pa4Content').style.display = 'none';
+    } else if (name == 'PA1'){
+      document.getElementById('allPostcodeContent').style.display = 'none';
       document.getElementById('pa1Content').style.display = 'block';
       document.getElementById('pa2Content').style.display = 'none';
       document.getElementById('pa3Content').style.display = 'none';
       document.getElementById('pa4Content').style.display = 'none';
     } else if (name == 'PA2'){
-      document.getElementById('pa2Content').style.display = 'block';
+      document.getElementById('allPostcodeContent').style.display = 'none';
       document.getElementById('pa1Content').style.display = 'none';
+      document.getElementById('pa2Content').style.display = 'block';
       document.getElementById('pa3Content').style.display = 'none';
       document.getElementById('pa4Content').style.display = 'none';
     } else if (name == 'PA3'){
-      document.getElementById('pa3Content').style.display = 'block';
-      document.getElementById('pa1Content').style.display = 'none';
-      document.getElementById('pa2Content').style.display = 'none';
-      document.getElementById('pa4Content').style.display = 'none';
-    } else if (name == 'PA4'){
-      document.getElementById('pa4Content').style.display = 'block';
-      document.getElementById('pa1Content').style.display = 'none';
-      document.getElementById('pa2Content').style.display = 'none';
-      document.getElementById('pa3Content').style.display = 'none';
-    } else {
-      document.getElementById('pa1Content').style.display = 'none';
-      document.getElementById('pa2Content').style.display = 'none';
-      document.getElementById('pa3Content').style.display = 'none';
-      document.getElementById('pa4Content').style.display = 'none';
-    };
-  }
-
-
-  function showTableWard(name){
-    if(name == 'Ward1'){
-      document.getElementById('ward1Content').style.display = 'block';
-      document.getElementById('ward2Content').style.display = 'none';
-      document.getElementById('ward3Content').style.display = 'none';
-      document.getElementById('ward4Content').style.display = 'none';
-      document.getElementById('ward5Content').style.display = 'none';
-      document.getElementById('ward6Content').style.display = 'none';
-      document.getElementById('ward7Content').style.display = 'none';
-      document.getElementById('ward8Content').style.display = 'none';
-      document.getElementById('ward9Content').style.display = 'none';
-      document.getElementById('ward10Content').style.display = 'none';
-    } else if (name == 'Ward2'){
-      document.getElementById('ward1Content').style.display = 'none';
-      document.getElementById('ward2Content').style.display = 'block';
-      document.getElementById('ward3Content').style.display = 'none';
-      document.getElementById('ward4Content').style.display = 'none';
-      document.getElementById('ward5Content').style.display = 'none';
-      document.getElementById('ward6Content').style.display = 'none';
-      document.getElementById('ward7Content').style.display = 'none';
-      document.getElementById('ward8Content').style.display = 'none';
-      document.getElementById('ward9Content').style.display = 'none';
-      document.getElementById('ward10Content').style.display = 'none';
-    } else if (name == 'Ward3'){
-      document.getElementById('ward1Content').style.display = 'none';
-      document.getElementById('ward2Content').style.display = 'none';
-      document.getElementById('ward3Content').style.display = 'block';
-      document.getElementById('ward4Content').style.display = 'none';
-      document.getElementById('ward5Content').style.display = 'none';
-      document.getElementById('ward6Content').style.display = 'none';
-      document.getElementById('ward7Content').style.display = 'none';
-      document.getElementById('ward8Content').style.display = 'none';
-      document.getElementById('ward9Content').style.display = 'none';
-      document.getElementById('ward10Content').style.display = 'none';
-    } else if (name == 'Ward4'){
-      document.getElementById('ward1Content').style.display = 'none';
-      document.getElementById('ward2Content').style.display = 'none';
-      document.getElementById('ward3Content').style.display = 'none';
-      document.getElementById('ward4Content').style.display = 'block';
-      document.getElementById('ward5Content').style.display = 'none';
-      document.getElementById('ward6Content').style.display = 'none';
-      document.getElementById('ward7Content').style.display = 'none';
-      document.getElementById('ward8Content').style.display = 'none';
-      document.getElementById('ward9Content').style.display = 'none';
-      document.getElementById('ward10Content').style.display = 'none';
-    } else if (name == 'Ward5'){
-      document.getElementById('ward1Content').style.display = 'none';
-      document.getElementById('ward2Content').style.display = 'none';
-      document.getElementById('ward3Content').style.display = 'none';
-      document.getElementById('ward4Content').style.display = 'none';
-      document.getElementById('ward5Content').style.display = 'block';
-      document.getElementById('ward6Content').style.display = 'none';
-      document.getElementById('ward7Content').style.display = 'none';
-      document.getElementById('ward8Content').style.display = 'none';
-      document.getElementById('ward9Content').style.display = 'none';
-      document.getElementById('ward10Content').style.display = 'none';
-    } else if (name == 'Ward6'){
-      document.getElementById('ward1Content').style.display = 'none';
-      document.getElementById('ward2Content').style.display = 'none';
-      document.getElementById('ward3Content').style.display = 'none';
-      document.getElementById('ward4Content').style.display = 'none';
-      document.getElementById('ward5Content').style.display = 'none';
-      document.getElementById('ward6Content').style.display = 'block';
-      document.getElementById('ward7Content').style.display = 'none';
-      document.getElementById('ward8Content').style.display = 'none';
-      document.getElementById('ward9Content').style.display = 'none';
-      document.getElementById('ward10Content').style.display = 'none';
-    } else if (name == 'Ward7'){
-     document.getElementById('ward1Content').style.display = 'none';
-     document.getElementById('ward2Content').style.display = 'none';
-     document.getElementById('ward3Content').style.display = 'none';
-     document.getElementById('ward4Content').style.display = 'none';
-     document.getElementById('ward5Content').style.display = 'none';
-     document.getElementById('ward6Content').style.display = 'none';
-     document.getElementById('ward7Content').style.display = 'block';
-     document.getElementById('ward8Content').style.display = 'none';
-     document.getElementById('ward9Content').style.display = 'none';
-     document.getElementById('ward10Content').style.display = 'none';
-   } else if (name == 'Ward8'){
-    document.getElementById('ward1Content').style.display = 'none';
-    document.getElementById('ward2Content').style.display = 'none';
-    document.getElementById('ward3Content').style.display = 'none';
-    document.getElementById('ward4Content').style.display = 'none';
-    document.getElementById('ward5Content').style.display = 'none';
-    document.getElementById('ward6Content').style.display = 'none';
-    document.getElementById('ward7Content').style.display = 'none';
-    document.getElementById('ward8Content').style.display = 'block';
-    document.getElementById('ward9Content').style.display = 'none';
-    document.getElementById('ward10Content').style.display = 'none';
-  } else if (name == 'Ward9'){
-    document.getElementById('ward1Content').style.display = 'none';
-    document.getElementById('ward2Content').style.display = 'none';
-    document.getElementById('ward3Content').style.display = 'none';
-    document.getElementById('ward4Content').style.display = 'none';
-    document.getElementById('ward5Content').style.display = 'none';
-    document.getElementById('ward6Content').style.display = 'none';
-    document.getElementById('ward7Content').style.display = 'none';
-    document.getElementById('ward8Content').style.display = 'none';
-    document.getElementById('ward9Content').style.display = 'block';
-    document.getElementById('ward10Content').style.display = 'none';
-  } else if (name == 'Ward10'){
-    document.getElementById('ward1Content').style.display = 'none';
-    document.getElementById('ward2Content').style.display = 'none';
-    document.getElementById('ward3Content').style.display = 'none';
-    document.getElementById('ward4Content').style.display = 'none';
-    document.getElementById('ward5Content').style.display = 'none';
-    document.getElementById('ward6Content').style.display = 'none';
-    document.getElementById('ward7Content').style.display = 'none';
-    document.getElementById('ward8Content').style.display = 'none';
-    document.getElementById('ward9Content').style.display = 'none';
-    document.getElementById('ward10Content').style.display = 'block';
+     document.getElementById('allPostcodeContent').style.display = 'none';
+     document.getElementById('pa1Content').style.display = 'none';
+     document.getElementById('pa2Content').style.display = 'none';
+     document.getElementById('pa3Content').style.display = 'block';
+     document.getElementById('pa4Content').style.display = 'none';
+   } else if (name == 'PA4'){
+    document.getElementById('allPostcodeContent').style.display = 'none';
+    document.getElementById('pa1Content').style.display = 'none';
+    document.getElementById('pa2Content').style.display = 'none';
+    document.getElementById('pa3Content').style.display = 'none';
+    document.getElementById('pa4Content').style.display = 'block';
   } else {
-    document.getElementById('ward1Content').style.display = 'none';
+    document.getElementById('allPostcodeContent').style.display = 'none';
+    document.getElementById('pa1Content').style.display = 'none';
+    document.getElementById('pa2Content').style.display = 'none';
+    document.getElementById('pa3Content').style.display = 'none';
+    document.getElementById('pa4Content').style.display = 'none';
+  };
+}
+
+
+function showTableWard(name){
+  if(name == 'Ward1'){
+    document.getElementById('ward1Content').style.display = 'block';
     document.getElementById('ward2Content').style.display = 'none';
     document.getElementById('ward3Content').style.display = 'none';
     document.getElementById('ward4Content').style.display = 'none';
@@ -1310,7 +1285,117 @@
     document.getElementById('ward8Content').style.display = 'none';
     document.getElementById('ward9Content').style.display = 'none';
     document.getElementById('ward10Content').style.display = 'none';
-  };
+  } else if (name == 'Ward2'){
+    document.getElementById('ward1Content').style.display = 'none';
+    document.getElementById('ward2Content').style.display = 'block';
+    document.getElementById('ward3Content').style.display = 'none';
+    document.getElementById('ward4Content').style.display = 'none';
+    document.getElementById('ward5Content').style.display = 'none';
+    document.getElementById('ward6Content').style.display = 'none';
+    document.getElementById('ward7Content').style.display = 'none';
+    document.getElementById('ward8Content').style.display = 'none';
+    document.getElementById('ward9Content').style.display = 'none';
+    document.getElementById('ward10Content').style.display = 'none';
+  } else if (name == 'Ward3'){
+    document.getElementById('ward1Content').style.display = 'none';
+    document.getElementById('ward2Content').style.display = 'none';
+    document.getElementById('ward3Content').style.display = 'block';
+    document.getElementById('ward4Content').style.display = 'none';
+    document.getElementById('ward5Content').style.display = 'none';
+    document.getElementById('ward6Content').style.display = 'none';
+    document.getElementById('ward7Content').style.display = 'none';
+    document.getElementById('ward8Content').style.display = 'none';
+    document.getElementById('ward9Content').style.display = 'none';
+    document.getElementById('ward10Content').style.display = 'none';
+  } else if (name == 'Ward4'){
+    document.getElementById('ward1Content').style.display = 'none';
+    document.getElementById('ward2Content').style.display = 'none';
+    document.getElementById('ward3Content').style.display = 'none';
+    document.getElementById('ward4Content').style.display = 'block';
+    document.getElementById('ward5Content').style.display = 'none';
+    document.getElementById('ward6Content').style.display = 'none';
+    document.getElementById('ward7Content').style.display = 'none';
+    document.getElementById('ward8Content').style.display = 'none';
+    document.getElementById('ward9Content').style.display = 'none';
+    document.getElementById('ward10Content').style.display = 'none';
+  } else if (name == 'Ward5'){
+    document.getElementById('ward1Content').style.display = 'none';
+    document.getElementById('ward2Content').style.display = 'none';
+    document.getElementById('ward3Content').style.display = 'none';
+    document.getElementById('ward4Content').style.display = 'none';
+    document.getElementById('ward5Content').style.display = 'block';
+    document.getElementById('ward6Content').style.display = 'none';
+    document.getElementById('ward7Content').style.display = 'none';
+    document.getElementById('ward8Content').style.display = 'none';
+    document.getElementById('ward9Content').style.display = 'none';
+    document.getElementById('ward10Content').style.display = 'none';
+  } else if (name == 'Ward6'){
+    document.getElementById('ward1Content').style.display = 'none';
+    document.getElementById('ward2Content').style.display = 'none';
+    document.getElementById('ward3Content').style.display = 'none';
+    document.getElementById('ward4Content').style.display = 'none';
+    document.getElementById('ward5Content').style.display = 'none';
+    document.getElementById('ward6Content').style.display = 'block';
+    document.getElementById('ward7Content').style.display = 'none';
+    document.getElementById('ward8Content').style.display = 'none';
+    document.getElementById('ward9Content').style.display = 'none';
+    document.getElementById('ward10Content').style.display = 'none';
+  } else if (name == 'Ward7'){
+   document.getElementById('ward1Content').style.display = 'none';
+   document.getElementById('ward2Content').style.display = 'none';
+   document.getElementById('ward3Content').style.display = 'none';
+   document.getElementById('ward4Content').style.display = 'none';
+   document.getElementById('ward5Content').style.display = 'none';
+   document.getElementById('ward6Content').style.display = 'none';
+   document.getElementById('ward7Content').style.display = 'block';
+   document.getElementById('ward8Content').style.display = 'none';
+   document.getElementById('ward9Content').style.display = 'none';
+   document.getElementById('ward10Content').style.display = 'none';
+ } else if (name == 'Ward8'){
+  document.getElementById('ward1Content').style.display = 'none';
+  document.getElementById('ward2Content').style.display = 'none';
+  document.getElementById('ward3Content').style.display = 'none';
+  document.getElementById('ward4Content').style.display = 'none';
+  document.getElementById('ward5Content').style.display = 'none';
+  document.getElementById('ward6Content').style.display = 'none';
+  document.getElementById('ward7Content').style.display = 'none';
+  document.getElementById('ward8Content').style.display = 'block';
+  document.getElementById('ward9Content').style.display = 'none';
+  document.getElementById('ward10Content').style.display = 'none';
+} else if (name == 'Ward9'){
+  document.getElementById('ward1Content').style.display = 'none';
+  document.getElementById('ward2Content').style.display = 'none';
+  document.getElementById('ward3Content').style.display = 'none';
+  document.getElementById('ward4Content').style.display = 'none';
+  document.getElementById('ward5Content').style.display = 'none';
+  document.getElementById('ward6Content').style.display = 'none';
+  document.getElementById('ward7Content').style.display = 'none';
+  document.getElementById('ward8Content').style.display = 'none';
+  document.getElementById('ward9Content').style.display = 'block';
+  document.getElementById('ward10Content').style.display = 'none';
+} else if (name == 'Ward10'){
+  document.getElementById('ward1Content').style.display = 'none';
+  document.getElementById('ward2Content').style.display = 'none';
+  document.getElementById('ward3Content').style.display = 'none';
+  document.getElementById('ward4Content').style.display = 'none';
+  document.getElementById('ward5Content').style.display = 'none';
+  document.getElementById('ward6Content').style.display = 'none';
+  document.getElementById('ward7Content').style.display = 'none';
+  document.getElementById('ward8Content').style.display = 'none';
+  document.getElementById('ward9Content').style.display = 'none';
+  document.getElementById('ward10Content').style.display = 'block';
+} else {
+  document.getElementById('ward1Content').style.display = 'none';
+  document.getElementById('ward2Content').style.display = 'none';
+  document.getElementById('ward3Content').style.display = 'none';
+  document.getElementById('ward4Content').style.display = 'none';
+  document.getElementById('ward5Content').style.display = 'none';
+  document.getElementById('ward6Content').style.display = 'none';
+  document.getElementById('ward7Content').style.display = 'none';
+  document.getElementById('ward8Content').style.display = 'none';
+  document.getElementById('ward9Content').style.display = 'none';
+  document.getElementById('ward10Content').style.display = 'none';
+};
 }
 </script>
 
