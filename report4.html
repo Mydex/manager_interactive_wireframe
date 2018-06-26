@@ -54,6 +54,32 @@
           Return to reports <a href="https://mydex.github.io/manager_interactive_wireframe/reports.html" class="btn btn-outline-secondary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/double-arrow.png" alt="logo" width="20"></a>
         </p>
       </div>
+      <form action="#/">
+        <select name="pickPostcode" onchange="showTable(this.options[this.selectedIndex].value)" required>
+          <option value="default"></option>
+          <option value="PA1">PA1</option>
+          <option value="PA2">PA2</option>
+          <option value="PA3">PA3</option>
+          <option value="PA4">PA4</option>
+        </select>
+      </form>
+
+
+      <div id="pa1Content" style="display: none;">
+        <div>PA1</div>
+      </div>
+
+      <div id="pa2Content" style="display: none;">
+        <div>PA2</div>
+      </div>
+
+      <div id="pa3Content" style="display: none;">
+        <div>PA3</div>
+      </div>
+
+      <div id="pa4Content" style="display: none;">
+        <div>PA4</div>
+      </div>
 
       <div id="module" class="row mx-1">
         <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProject1" aria-expanded="false" aria-controls="collapseProject1">One</a></h4>
@@ -177,6 +203,37 @@
     });
 
   })(document);
+
+
+
+  function showTable(name){
+    if(name == 'PA1'){
+      document.getElementById('pa1Content').style.display = 'block';
+      document.getElementById('pa2Content').style.display = 'none';
+      document.getElementById('pa3Content').style.display = 'none';
+      document.getElementById('pa4Content').style.display = 'none';
+    } else if (name == 'PA2'){
+      document.getElementById('pa2Content').style.display = 'block';
+      document.getElementById('pa1Content').style.display = 'none';
+      document.getElementById('pa3Content').style.display = 'none';
+      document.getElementById('pa4Content').style.display = 'none';
+    } else if (name == 'PA3'){
+      document.getElementById('pa3Content').style.display = 'block';
+      document.getElementById('pa1Content').style.display = 'none';
+      document.getElementById('pa2Content').style.display = 'none';
+      document.getElementById('pa4Content').style.display = 'none';
+    } else if (name == 'PA4'){
+      document.getElementById('pa4Content').style.display = 'block';
+      document.getElementById('pa1Content').style.display = 'none';
+      document.getElementById('pa2Content').style.display = 'none';
+      document.getElementById('pa3Content').style.display = 'none';
+    } else {
+      document.getElementById('pa1Content').style.display = 'none';
+      document.getElementById('pa2Content').style.display = 'none';
+      document.getElementById('pa3Content').style.display = 'none';
+      document.getElementById('pa4Content').style.display = 'none';
+    };
+  }
 </script>
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
