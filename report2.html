@@ -181,22 +181,38 @@
   <div id="module" class="container row mt-3">
     <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseEA4" aria-expanded="false" aria-controls="collapseEA4">Energy Advocate Four</a></h4>
     <div class="collapse col-12" id="collapseEA4" aria-labelledby="headingEA4">
-      <table class="table table-bordered table-sm text-left">
-        <tbody>
-          <tr>
+      <div class="col-12 row mt-2 mb-1">
+        <div class="input-group date" data-provide="datepicker">
+          <form action="#">
+            <table>
+              <tr>
+                <td>Start date:</td>
+                <td class="ml-2">End date:</td>
+              </tr>
+              <tr>
+                <td><input type="date" name="start"></td>
+                <td class="ml-2"><input type="date" name="end"></td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-sm text-left">
+          <thead class="bg-success">
             <th>All Clients</th>
-            <td class="text-right">31</td>
-          </tr>
-          <tr>
-            <th>New Clients in 2018</th>
-            <td class="text-right">8</td>
-          </tr>
-          <tr>
-            <th>Total savings for 2018</th>
-            <td class="text-right">£1335</td>
-          </tr>
-        </tbody>
-      </table>
+            <th>New Clients</th>
+            <th>Total savings</th>
+          </thead>
+          <tbody>
+            <tr class="text-right">
+              <td>31</td>
+              <td>8</td>
+              <td>£1335</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
