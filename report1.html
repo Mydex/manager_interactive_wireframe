@@ -68,15 +68,15 @@
             <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSavings" aria-expanded="false" aria-controls="collapseSavings">Calendar savings</a></h4>
             <div class="collapse col-12" id="collapseSavings" aria-labelledby="headingSavings">
                 <div class="table-responsive">
-                 <table class="table table-bordered table-sm text-left">
+                   <table class="table table-bordered table-sm text-left">
                     <thead class="bg-success">
                         <tr>
                             <td>Year</td>
                             <td>General</td>
                             <td>Capital</td>
                             <td>Total</td>
-                            <td>Total no of 1st visits</td>
-                            <td>No of further visits</td>
+                            <td>1st visits</td>
+                            <td>Further visits</td>
                             <td>Carbon savings</td>
                         </tr>
                     </thead>
@@ -111,58 +111,79 @@
                     </tbody>
                 </table>
             </div>
+            <p class="col-12 col-md-3 col-lg-3">
+                Print Calendar savings report 
+                <a href="#/" href="#" class="btn btn-outline-secondary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
+            </p>
+            <p class="col-12 col-md-3 col-lg-3">Download Calendar savings report
+                <a href="#/" class="btn btn-outline-secondary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+            </p>
+            <p class="col-12 col-md-3 col-lg-3">Download Calendar savings report
+                <a href="#/" class="btn btn-outline-secondary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
+            </p>
         </div>
     </div>
+</div>
 
 
-    <div id="module" class="container row mt-3">
-        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFinancial" aria-expanded="false" aria-controls="collapseFinancial">Financial year savings</a></h4>
-        <div class="collapse col-12" id="collapseFinancial" aria-labelledby="headingFinancial">
-            <div class="table-responsive">
-             <table class="table table-bordered table-sm text-left">
-                <thead class="bg-success">
-                    <tr>
-                        <td>Year</td>
-                        <td>General</td>
-                        <td>Capital</td>
-                        <td>Total</td>
-                        <td>Total no of 1st visits</td>
-                        <td>No of further visits</td>
-                        <td>Carbon savings</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2018</td>
-                        <td class="text-right">£2,500</td>
-                        <td class="text-right">£10,638</td>
-                        <td class="text-right">£1,318</td>
-                        <td>25</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>2017</td>
-                        <td class="text-right">£1,900</td>
-                        <td class="text-right">£9,363</td>
-                        <td class="text-right">£11,263</td>
-                        <td>19</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>2016</td>
-                        <td class="text-right">£1,500</td>
-                        <td class="text-right">£8,379</td>
-                        <td class="text-right">£9,879</td>
-                        <td>15</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<div id="module" class="container row mt-3">
+    <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFinancial" aria-expanded="false" aria-controls="collapseFinancial">Financial year savings</a></h4>
+    <div class="collapse col-12" id="collapseFinancial" aria-labelledby="headingFinancial">
+        <div class="table-responsive">
+           <table class="table table-bordered table-sm text-left">
+            <thead class="bg-success">
+                <tr>
+                    <td>Year</td>
+                    <td>General</td>
+                    <td>Capital</td>
+                    <td>Total</td>
+                    <td>1st visits</td>
+                    <td>Further visits</td>
+                    <td>Carbon savings</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2018</td>
+                    <td class="text-right">£2,500</td>
+                    <td class="text-right">£10,638</td>
+                    <td class="text-right">£1,318</td>
+                    <td>25</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2017</td>
+                    <td class="text-right">£1,900</td>
+                    <td class="text-right">£9,363</td>
+                    <td class="text-right">£11,263</td>
+                    <td>19</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2016</td>
+                    <td class="text-right">£1,500</td>
+                    <td class="text-right">£8,379</td>
+                    <td class="text-right">£9,879</td>
+                    <td>15</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+    <p class="col-12 col-md-3 col-lg-3">
+        Print Financial savings report 
+        <a href="#/" href="#" class="btn btn-outline-secondary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
+    </p>
+    <p class="col-12 col-md-3 col-lg-3">Download Financial savings report
+        <a href="#/" class="btn btn-outline-secondary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+    </p>
+    <p class="col-12 col-md-3 col-lg-3">Download Financial savings report
+        <a href="#/" class="btn btn-outline-secondary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
+    </p>
+</div>
 </div>
 
 
@@ -185,15 +206,15 @@
         </div>
 
         <div class="table-responsive">
-         <table class="table table-bordered table-sm text-left">
+           <table class="table table-bordered table-sm text-left">
             <thead class="bg-success">
                 <tr>
                     <td>Year</td>
                     <td>General</td>
                     <td>Capital</td>
                     <td>Total</td>
-                    <td>Total no of 1st visits</td>
-                    <td>No of further visits</td>
+                    <td>1st visits</td>
+                    <td>Further visits</td>
                     <td>Carbon savings</td>
                 </tr>
             </thead>
@@ -209,6 +230,16 @@
             </tbody>
         </table>
     </div>
+    <p class="col-12 col-md-3 col-lg-3">
+        Print Financial savings report 
+        <a href="#/" href="#" class="btn btn-outline-secondary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
+    </p>
+    <p class="col-12 col-md-3 col-lg-3">Download Financial savings report
+        <a href="#/" class="btn btn-outline-secondary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+    </p>
+    <p class="col-12 col-md-3 col-lg-3">Download Financial savings report
+        <a href="#/" class="btn btn-outline-secondary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
+    </p>
 </div>
 </div>
 
