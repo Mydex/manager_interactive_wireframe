@@ -56,7 +56,7 @@
       </div>
 
       <div id="module" class="row mx-1">
-        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProject1" aria-expanded="false" aria-controls="collapseProject1">C4R</a></h4>
+        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProject1" aria-expanded="false" aria-controls="collapseProject1" onclick="showPrintButton();">C4R</a></h4>
         <div class="collapse col-12 p-0" id="collapseProject1" aria-labelledby="headingProject1">
           <div class="input-group date mt-2 mb-1" data-provide="datepicker">
             <form action="#">
@@ -144,7 +144,7 @@
       </div>
 
       <div id="module" class="row mx-1">
-        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProject2" aria-expanded="false" aria-controls="collapseProject2">Families First</a></h4>
+        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProject2" aria-expanded="false" aria-controls="collapseProject2" onclick="showPrintButton();">Families First</a></h4>
         <div class="collapse col-12 p-0" id="collapseProject2" aria-labelledby="headingProject2">
           <div class="col-12 row mt-2 mb-1">
             <div class="input-group date" data-provide="datepicker">
@@ -234,7 +234,7 @@
       </div>
 
       <div id="module" class="row mx-1">
-        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProject3" aria-expanded="false" aria-controls="collapseProject3">Renfrewshire wide</a></h4>
+        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProject3" aria-expanded="false" aria-controls="collapseProject3" onclick="showPrintButton();">Renfrewshire wide</a></h4>
         <div class="collapse col-12 p-0" id="collapseProject3" aria-labelledby="headingProject3">
           <div class="col-12 row mt-2 mb-1">
             <div class="input-group date" data-provide="datepicker">
@@ -324,7 +324,7 @@
      </div>
    </div>
 
-   <div class="row mt-4">
+   <div class="row mt-4"  id="printButtons" style="display: none">
      <p class="col-12 col-md-4 col-lg-4">
        Print all reports
        <button href="#/" href="#" class="btn btn-outline-secondary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</button>
@@ -356,6 +356,12 @@
   color: black;
 }
 </style>
+
+<script>  
+ function showPrintButton() {
+  document.getElementById('printButtons').style.display = 'block';
+}
+</script>
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
   <nav class="navbar navbar-expand-sm">  
