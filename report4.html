@@ -1731,13 +1731,23 @@
 <script>
 
   var tds = document.getElementById('countit1').getElementsByTagName('td');
-  var sum1 = 0;
+  var sum1 = 0; sum2 = 0; sum3 = 0; sum4 = 0; sum5 = 0; sum6 = 0; sum7 = 0;
   for(var i = 0; i < tds.length; i ++) {
     if(tds[i].className == 'count1.1') {
       sum1 += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
     }
   }
-  document.getElementById('countitfooter1').innerHTML += '<tr><th>Total</th><td>' + sum1+ '</td></tr>';
+  document.getElementById('countitfooter1').innerHTML += 
+  '<tr>\
+  <th>Total</th>\
+  <th>' + sum1+ '</th>\
+  <th>' + sum2+ '</th>\
+  <th>' + sum3+ '</th>\
+  <th>' + sum4+ '</th>\
+  <th>' + sum5+ '</th>\
+  <th>' + sum6+ '</th>\
+  <th>' + sum7+ '</th>\
+  </tr>';
   
 
 
