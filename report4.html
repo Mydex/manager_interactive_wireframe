@@ -716,7 +716,7 @@
               <tbody>
                 <tr>
                   <td>1: Renfrew North and Braehead</td>
-                  <td class="text-right">£</td>
+                  <td class="text-right count1.1">£</td>
                   <td class="text-right">£</td>
                   <td class="text-right">£</td>
                   <td>11</td>
@@ -725,7 +725,7 @@
                 </tr>
                 <tr>
                   <td>2: Renfrew South and Gallowhill</td>
-                  <td class="text-right">£</td>
+                  <td class="text-right count1.1">£</td>
                   <td class="text-right">£</td>
                   <td class="text-right">£</td>
                   <td>9</td>
@@ -734,7 +734,7 @@
                 </tr>
                 <tr>
                   <td>3: Paisley Northeast and Ralston</td>
-                  <td class="text-right">£</td>
+                  <td class="text-right count1.1">£</td>
                   <td class="text-right">£</td>
                   <td class="text-right">£</td>
                   <td>8</td>
@@ -743,7 +743,7 @@
                 </tr>
                 <tr>
                   <td>4: Paisley Northwest</td>
-                  <td class="text-right">£</td>
+                  <td class="text-right count1.1">£</td>
                   <td class="text-right">£</td>
                   <td class="text-right">£</td>
                   <td>4</td>
@@ -752,7 +752,7 @@
                 </tr>
                 <tr>
                   <td>5: Paisley East and Central</td>
-                  <td class="text-right">£</td>
+                  <td class="text-right count1.1">£</td>
                   <td class="text-right">£</td>
                   <td class="text-right">£</td>
                   <td>8</td>
@@ -761,7 +761,7 @@
                 </tr>
                 <tr>
                   <td>6: Paisley Southeast</td>
-                  <td class="text-right">£</td>
+                  <td class="text-right count1.1">£</td>
                   <td class="text-right">£</td>
                   <td class="text-right">£</td>
                   <td>4</td>
@@ -770,7 +770,7 @@
                 </tr>
                 <tr>
                   <td>7: Paisley Southwest</td>
-                  <td class="text-right">£</td>
+                  <td class="text-right count1.1">£</td>
                   <td class="text-right">£</td>
                   <td class="text-right">£</td>
                   <td>3</td>
@@ -779,7 +779,7 @@
                 </tr>
                 <tr>
                   <td>8: Johnstone South and Elderslie</td>
-                  <td class="text-right">£</td>
+                  <td class="text-right count1.1">£</td>
                   <td class="text-right">£</td>
                   <td class="text-right">£</td>
                   <td>14</td>
@@ -788,7 +788,7 @@
                 </tr>
                 <tr>
                   <td>9: Johnstone North, Kilbarchan, Howwood and Lochwinnoch</td>
-                  <td class="text-right">£</td>
+                  <td class="text-right count1.1">£</td>
                   <td class="text-right">£</td>
                   <td class="text-right">£</td>
                   <td>7</td>
@@ -797,7 +797,7 @@
                 </tr>
                 <tr>
                   <td>10: Houston, Crosslee and Linwood</td>
-                  <td class="text-right">£</td>
+                  <td class="text-right count1.1">£</td>
                   <td class="text-right">£</td>
                   <td class="text-right">£</td>
                   <td>18</td>
@@ -1730,41 +1730,41 @@
 
 <script>
 
-  var tds = document.getElementById('countit1').getElementsByTagName('td');
+  var tds1 = document.getElementById('countit1').getElementsByTagName('td');
   var sum1 = 0; sum2 = 0; sum3 = 0; sum4 = 0; sum5 = 0; sum6 = 0; sum7 = 0;
-  for(var i = 0; i < tds.length; i ++) {
+  for(var i = 0; i < tds1.length; i ++) {
     if(tds[i].className == 'count1.1') {
-      sum1 += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+      sum1 += isNaN(tds1[i].innerHTML) ? 0 : parseInt(tds1[i].innerHTML);
     }
   }
-  for(var i = 0; i < tds.length; i ++) {
+  for(var i = 0; i < tds1.length; i ++) {
     if(tds[i].className == 'count1.2') {
-      sum2 += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+      sum2 += isNaN(tds1[i].innerHTML) ? 0 : parseInt(tds1[i].innerHTML);
     }
   }
-  for(var i = 0; i < tds.length; i ++) {
-    if(tds[i].className == 'count1.3') {
-      sum3 += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+  for(var i = 0; i < tds1.length; i ++) {
+    if(tds1[i].className == 'count1.3') {
+      sum3 += isNaN(tds1[i].innerHTML) ? 0 : parseInt(tds1[i].innerHTML);
     }
   }
-  for(var i = 0; i < tds.length; i ++) {
-    if(tds[i].className == 'count1.4') {
-      sum4 += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+  for(var i = 0; i < tds1.length; i ++) {
+    if(tds1[i].className == 'count1.4') {
+      sum4 += isNaN(tds1[i].innerHTML) ? 0 : parseInt(tds1[i].innerHTML);
     }
   }
-  for(var i = 0; i < tds.length; i ++) {
-    if(tds[i].className == 'count1.5') {
-      sum5 += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+  for(var i = 0; i < tds1.length; i ++) {
+    if(tds1[i].className == 'count1.5') {
+      sum5 += isNaN(tds1[i].innerHTML) ? 0 : parseInt(tds1[i].innerHTML);
     }
   }
-  for(var i = 0; i < tds.length; i ++) {
-    if(tds[i].className == 'count1.6') {
-      sum6 += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+  for(var i = 0; i < tds1.length; i ++) {
+    if(tds1[i].className == 'count1.6') {
+      sum6 += isNaN(tds1[i].innerHTML) ? 0 : parseInt(tds1[i].innerHTML);
     }
   }
-  for(var i = 0; i < tds.length; i ++) {
-    if(tds[i].className == 'count1.7') {
-      sum7 += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+  for(var i = 0; i < tds1.length; i ++) {
+    if(tds1[i].className == 'count1.7') {
+      sum7 += isNaN(tds1[i].innerHTML) ? 0 : parseInt(tds1[i].innerHTML);
     }
   }
   document.getElementById('countitfooter1').innerHTML += 
@@ -1779,7 +1779,50 @@
   <th>' + sum7+ '</th>\
   </tr>';
   
+  
+  var tds2 = document.getElementById('countit2').getElementsByTagName('td');
+  var sum1 = 0; sum2 = 0; sum3 = 0; sum4 = 0; sum5 = 0; sum6 = 0; sum7 = 0;
+  for(var i = 0; i < tds2.length; i ++) {
+    if(tds2[i].className == 'count1.1') {
+      sum1 += isNaN(tds2[i].innerHTML) ? 0 : parseInt(tds2[i].innerHTML);
+    }
+  }
+  for(var i = 0; i < tds2.length; i ++) {
+    if(tds2[i].className == 'count1.2') {
+      sum2 += isNaN(tds2[i].innerHTML) ? 0 : parseInt(tds2[i].innerHTML);
+    }
+  }
+  for(var i = 0; i < tds2.length; i ++) {
+    if(tds2[i].className == 'count1.3') {
+      sum3 += isNaN(tds2[i].innerHTML) ? 0 : parseInt(tds2[i].innerHTML);
+    }
+  }
+  for(var i = 0; i < tds2.length; i ++) {
+    if(tds2[i].className == 'count1.4') {
+      sum4 += isNaN(tds2[i].innerHTML) ? 0 : parseInt(tds2[i].innerHTML);
+    }
+  }
+  for(var i = 0; i < tds2.length; i ++) {
+    if(tds2[i].className == 'count1.5') {
+      sum5 += isNaN(tds2[i].innerHTML) ? 0 : parseInt(tds2[i].innerHTML);
+    }
+  }
+  for(var i = 0; i < tds2.length; i ++) {
+    if(tds2[i].className == 'count1.6') {
+      sum6 += isNaN(tds2[i].innerHTML) ? 0 : parseInt(tds2[i].innerHTML);
+    }
+  }
 
+  document.getElementById('countitfooter2').innerHTML += 
+  '<tr class="bg-light">\
+  <th>Total</th>\
+  <th>' + sum1+ '</th>\
+  <th>' + sum2+ '</th>\
+  <th>' + sum3+ '</th>\
+  <th>' + sum4+ '</th>\
+  <th>' + sum5+ '</th>\
+  <th>' + sum6+ '</th>\
+  </tr>';
 
 
   function showTablePostcode(name){
