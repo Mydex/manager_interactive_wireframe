@@ -66,7 +66,70 @@
 
 
       <div id="pa1Content" style="display: none;">
-        <div>PA1</div>
+        <div class="col-12 col-md-6 col-lg-6 p-0">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <tbody>
+                <tr>
+                  <th class="bg-light">Total number of Clients</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">New Clients</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Stats from client status<br>
+                    <li>Active</li>
+                    <li>Reactivated</li>
+                    <li>Referral</li>
+                    <li>Rereferral</li>
+                    <li>Not active</li>
+                  </th>
+                  <td>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 p-0">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <tbody>
+                <tr>
+                  <th class="bg-light">General</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Capital</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Total</th>
+                  <td class="text-right">£</td>
+                </tr>
+                <tr>
+                  <th class="bg-light">No of initial home visits</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">No of further visits</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th class="bg-light">Associated carbon savings</th>
+                  <td class="text-right">£</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
 
       <div id="pa2Content" style="display: none;">
@@ -81,7 +144,7 @@
         <div>PA4</div>
       </div>
 
-      <div id="module" class="row mx-1">
+      <!-- <div id="module" class="row mx-1">
         <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProject1" aria-expanded="false" aria-controls="collapseProject1">One</a></h4>
         <div class="collapse col-12 p-0" id="collapseProject1" aria-labelledby="headingProject1">
           <div class="col-12">
@@ -114,9 +177,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div id="module" class="row mx-1">
+     <!--  <div id="module" class="row mx-1">
         <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProject2" aria-expanded="false" aria-controls="collapseProject2">Two</a></h4>
         <div class="collapse col-12 p-0" id="collapseProject2" aria-labelledby="headingProject2">
           <div class="col-12">
@@ -124,21 +187,21 @@
           </div>
         </div>
       </div>
-
-      <div id="module" class="row mx-1">
+    -->
+      <!-- <div id="module" class="row mx-1">
         <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProject3" aria-expanded="false" aria-controls="collapseProject3">Three</a></h4>
         <div class="collapse col-12 p-0" id="collapseProject3" aria-labelledby="headingProject3">
           <div class="col-12">
 
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </div>
 </main>
 
-<style>
+<!-- <style>
 #line {
   border-bottom: 2px solid #2E8B57;
 }
@@ -154,55 +217,55 @@
   float: right;
   color: black;
 }
-</style>
+</style> -->
 
 <script>
 
-  var tds = document.getElementById('countit1').getElementsByTagName('td');
-  var sum = 0;
-  for(var i = 0; i < tds.length; i ++) {
-    if(tds[i].className == 'count') {
-      sum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
-    }
-  }
-  document.getElementById('countitfooter').innerHTML += '<tr><th>Total</th><td>' + sum + '</td></tr>';
-  (function(document) {
-    'use strict';
-    var TableFilter = (function(Arr) {
-      var input;
+  // var tds = document.getElementById('countit1').getElementsByTagName('td');
+  // var sum = 0;
+  // for(var i = 0; i < tds.length; i ++) {
+    // if(tds[i].className == 'count') {
+      // sum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+    // }
+  // }
+  // document.getElementById('countitfooter').innerHTML += '<tr><th>Total</th><td>' + sum + '</td></tr>';
+  // (function(document) {
+  //   'use strict';
+  //   var TableFilter = (function(Arr) {
+  //     var input;
 
-      function onInputEvent(e) {
-        input = e.target;
-        var tables = document.getElementsByClassName(input.getAttribute('data-table'));
-        Arr.forEach.call(tables, function(table) {
-          Arr.forEach.call(table.tBodies, function(tbody) {
-            Arr.forEach.call(tbody.rows, filterRow);
-          });
-        });
-      }
+  //     function onInputEvent(e) {
+  //       input = e.target;
+  //       var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+  //       Arr.forEach.call(tables, function(table) {
+  //         Arr.forEach.call(table.tBodies, function(tbody) {
+  //           Arr.forEach.call(tbody.rows, filterRow);
+  //         });
+  //       });
+  //     }
 
-      function filterRow(row) {
-        var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
-        row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-      }
+  //     function filterRow(row) {
+  //       var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
+  //       row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+  //     }
 
-      return {
-        init: function() {
-          var inputs = document.getElementsByClassName('tableFilter');
-          Arr.forEach.call(inputs, function(input) {
-            input.oninput = onInputEvent;
-          });
-        }
-      };
-    })(Array.prototype);
+  //     return {
+  //       init: function() {
+  //         var inputs = document.getElementsByClassName('tableFilter');
+  //         Arr.forEach.call(inputs, function(input) {
+  //           input.oninput = onInputEvent;
+  //         });
+  //       }
+  //     };
+  //   })(Array.prototype);
 
-    document.addEventListener('readystatechange', function() {
-      if (document.readyState === 'complete') {
-        TableFilter.init();
-      }
-    });
+  //   document.addEventListener('readystatechange', function() {
+  //     if (document.readyState === 'complete') {
+  //       TableFilter.init();
+  //     }
+  //   });
 
-  })(document);
+  // })(document);
 
 
 
