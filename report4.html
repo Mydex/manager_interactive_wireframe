@@ -700,7 +700,7 @@
         </div>
         <div class="col-12 p-0">
           <div class="table-responsive">
-            <table class="table table-sm table-bordered text-left">
+            <table class="table table-sm table-bordered text-left" id="countit1">
               <thead>
                 <th class="bg-light">Ward No</th>
                 <th class="bg-light">General</th>
@@ -802,6 +802,8 @@
                   <td class="text-right">£</td>
                 </tr>
               </tbody>
+              <tfoot id="countitfooter">
+              </tfoot>
             </table>
           </div>
         </div>
@@ -1725,51 +1727,51 @@
 
 <script>
 
-  // var tds = document.getElementById('countit1').getElementsByTagName('td');
-  // var sum = 0;
-  // for(var i = 0; i < tds.length; i ++) {
-    // if(tds[i].className == 'count') {
-      // sum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
-    // }
-  // }
-  // document.getElementById('countitfooter').innerHTML += '<tr><th>Total</th><td>' + sum + '</td></tr>';
-  // (function(document) {
-  //   'use strict';
-  //   var TableFilter = (function(Arr) {
-  //     var input;
+  var tds = document.getElementById('countit1').getElementsByTagName('td');
+  var sum = 0;
+  for(var i = 0; i < tds.length; i ++) {
+    if(tds[i].className == 'count') {
+      sum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+    }
+  }
+  document.getElementById('countitfooter').innerHTML += '<tr><th>Total</th><td>' + sum + '</td></tr>';
+  (function(document) {
+    'use strict';
+    var TableFilter = (function(Arr) {
+      var input;
 
-  //     function onInputEvent(e) {
-  //       input = e.target;
-  //       var tables = document.getElementsByClassName(input.getAttribute('data-table'));
-  //       Arr.forEach.call(tables, function(table) {
-  //         Arr.forEach.call(table.tBodies, function(tbody) {
-  //           Arr.forEach.call(tbody.rows, filterRow);
-  //         });
-  //       });
-  //     }
+      function onInputEvent(e) {
+        input = e.target;
+        var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+        Arr.forEach.call(tables, function(table) {
+          Arr.forEach.call(table.tBodies, function(tbody) {
+            Arr.forEach.call(tbody.rows, filterRow);
+          });
+        });
+      }
 
-  //     function filterRow(row) {
-  //       var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
-  //       row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-  //     }
+      function filterRow(row) {
+        var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
+        row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+      }
 
-  //     return {
-  //       init: function() {
-  //         var inputs = document.getElementsByClassName('tableFilter');
-  //         Arr.forEach.call(inputs, function(input) {
-  //           input.oninput = onInputEvent;
-  //         });
-  //       }
-  //     };
-  //   })(Array.prototype);
+      return {
+        init: function() {
+          var inputs = document.getElementsByClassName('tableFilter');
+          Arr.forEach.call(inputs, function(input) {
+            input.oninput = onInputEvent;
+          });
+        }
+      };
+    })(Array.prototype);
 
-  //   document.addEventListener('readystatechange', function() {
-  //     if (document.readyState === 'complete') {
-  //       TableFilter.init();
-  //     }
-  //   });
+    document.addEventListener('readystatechange', function() {
+      if (document.readyState === 'complete') {
+        TableFilter.init();
+      }
+    });
 
-  // })(document);
+  })(document);
 
 
 
