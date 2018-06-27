@@ -57,7 +57,7 @@
 
 
       <div id="module" class="row mx-1">
-        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePostcodes" aria-expanded="false" aria-controls="collapsePostcodes">Postcodes</a></h4>
+        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePostcodes" aria-expanded="false" aria-controls="collapsePostcodes">Postcodes</a></h4>
         <div class="collapse col-12 p-0" id="collapsePostcodes" aria-labelledby="headingPostcodes">
           <div class="input-group date mt-2 mb-1" data-provide="datepicker">
             <form action="#">
@@ -197,11 +197,11 @@
             </div>
           </div>
           <p class="col-12 col-md-4 col-lg-4">Print postcode report 
-            <button href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</button>
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
           </p>
           <p class="col-12 col-md-7 col-lg-7">Download postcode report
-            <button href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</button>
-            <button href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</button>
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
           </p>
         </div>
       </div>
@@ -209,7 +209,7 @@
 
 
       <div id="module" class="row mx-1">
-        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseWards" aria-expanded="false" aria-controls="collapseWards">Wards</a></h4>
+        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseWards" aria-expanded="false" aria-controls="collapseWards">Wards</a></h4>
         <div class="collapse col-12 p-0" id="collapseWards" aria-labelledby="headingWards">
          <div class="input-group date mt-2 mb-1" data-provide="datepicker">
            <form action="#">
@@ -468,11 +468,11 @@
           </div>
         </div>
         <p class="col-12 col-md-4 col-lg-4">Print ward report 
-          <button href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</button>
+          <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
         </p>
         <p class="col-12 col-md-7 col-lg-7">Download ward report
-          <button href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</button>
-          <button href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</button>
+          <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+          <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
         </p>
       </div>
     </div>
@@ -486,13 +486,13 @@
   border-bottom: 2px solid #2E8B57;
 }
 
-#module a.collapsed:after {
+#module #accordionHeading.collapsed:after {
   content: '+';
   float: right;
   color: black;
 }
 
-#module a:not(.collapsed):after {
+#module #accordionHeading:not(.collapsed):after {
   content: '-';
   float: right;
   color: black;
