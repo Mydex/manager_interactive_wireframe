@@ -181,7 +181,7 @@
            <td>Citizen Fourty-four</td>
            <td>Pending</td>
            <td>Council : name</td>
-           <td><label class="form-check-label"><input type="checkbox" class="form-check-input">Requested update</label></td>
+           <td><label class="form-check-label"><input type="checkbox" onclick="checkRequest()" id="request" class="form-check-input"> Requested update</label></td>
            <td>077123456789</td>
            <td>
             <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes1" aria-expanded="false" aria-controls="collapseNotes1">View</button>
@@ -380,6 +380,15 @@
     } else {
       document.getElementById('input2').innerHTML='';
     } 
+  }
+
+  function checkRequest ()
+  {
+    var checkbox = document.getElementById('request');
+    if (checkbox.checked != true)
+    {
+      alert("Set up a task for energy advocate");
+    }
   }
 </script>
 
