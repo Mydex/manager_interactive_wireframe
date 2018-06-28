@@ -64,7 +64,7 @@
                     <option value="phoneVisit">Phone call - Arrange Visit</option>
                     <option value="phoneOngoing">Phone call - Ongoing case</option>
                     <option value="visitFirst">Visit - First Visit</option>
-                    <option value="visitFollpw">Visit - Follow up visit</option>
+                    <option value="visitFollow">Visit - Follow up visit</option>
                     <option value="admin">Admin</option>
                     <option value="emailOngoing">Email - Ongoing case</option>
                     <option value="event">Events</option>
@@ -541,6 +541,98 @@
       </div>';
     } else if ( name == 'emailOngoing'){
       document.getElementById('formGenerated').innerHTML =
+      '<div>\
+      <label>Task Details</label>\
+      <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>\
+      </div>\
+      <div>\
+      <label for="taskType" class="mt-1 mb-1">Assign to a client</label>\
+      <select class="form-control form-control-sm" id="taskType">\
+      <option>N/a</option>\
+      <option>Citizen Four</option>\
+      <option>Citizen Seven</option>\
+      <option>Citizen Nine</option>\
+      <option>Citizen Thirteen</option>\
+      <option>Citizen Fifteen</option>\
+      <option>Citizen Ninenteen</option>\
+      <option>Citizen Twenty</option>\
+      <option>Citizen Twenty-four</option>\
+      <option>Citizen Twenty-eight</option>\
+      <option>Citizen Twenty-nine</option>\
+      <option>Citizen Thirty-two</option>\
+      <option>Citizen Thirty-six</option>\
+      </select>\
+      </div>';
+    } else if ('visitFollow') {
+      '<div>\
+      <label>Task Details</label>\
+      <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>\
+      </div>\
+      <div>\
+      <label for="taskType" class="mt-1 mb-1">Assign to a client</label>\
+      <select class="form-control form-control-sm" id="taskType">\
+      <option>N/a</option>\
+      <option>Citizen Four</option>\
+      <option>Citizen Seven</option>\
+      <option>Citizen Nine</option>\
+      <option>Citizen Thirteen</option>\
+      <option>Citizen Fifteen</option>\
+      <option>Citizen Ninenteen</option>\
+      <option>Citizen Twenty</option>\
+      <option>Citizen Twenty-four</option>\
+      <option>Citizen Twenty-eight</option>\
+      <option>Citizen Twenty-nine</option>\
+      <option>Citizen Thirty-two</option>\
+      <option>Citizen Thirty-six</option>\
+      </select>\
+      </div>';
+    } else if ('admin') {
+      '<div>\
+      <label>Task Details</label>\
+      <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>\
+      </div>\
+      <div>\
+      <label for="taskType" class="mt-1 mb-1">Assign to a client</label>\
+      <select class="form-control form-control-sm" id="taskType">\
+      <option>N/a</option>\
+      <option>Citizen Four</option>\
+      <option>Citizen Seven</option>\
+      <option>Citizen Nine</option>\
+      <option>Citizen Thirteen</option>\
+      <option>Citizen Fifteen</option>\
+      <option>Citizen Ninenteen</option>\
+      <option>Citizen Twenty</option>\
+      <option>Citizen Twenty-four</option>\
+      <option>Citizen Twenty-eight</option>\
+      <option>Citizen Twenty-nine</option>\
+      <option>Citizen Thirty-two</option>\
+      <option>Citizen Thirty-six</option>\
+      </select>\
+      </div>';
+    } else if (event) {
+      '<div>\
+      <label>Task Details</label>\
+      <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>\
+      </div>\
+      <div>\
+      <label for="taskType" class="mt-1 mb-1">Assign to a client</label>\
+      <select class="form-control form-control-sm" id="taskType">\
+      <option>N/a</option>\
+      <option>Citizen Four</option>\
+      <option>Citizen Seven</option>\
+      <option>Citizen Nine</option>\
+      <option>Citizen Thirteen</option>\
+      <option>Citizen Fifteen</option>\
+      <option>Citizen Ninenteen</option>\
+      <option>Citizen Twenty</option>\
+      <option>Citizen Twenty-four</option>\
+      <option>Citizen Twenty-eight</option>\
+      <option>Citizen Twenty-nine</option>\
+      <option>Citizen Thirty-two</option>\
+      <option>Citizen Thirty-six</option>\
+      </select>\
+      </div>';
+    } else if (trainingWork) {
       '<div>\
       <label>Task Details</label>\
       <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>\
