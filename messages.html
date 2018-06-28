@@ -462,8 +462,8 @@
       document.getElementById('formGenerated').innerHTML =
       '<form action="/#">\
       <label for="eaName" class="mt-1 mb-1">Assign to an Energy Advocate</label>\
-      <select id="eaName" id="eaName" class="form-control mb-1" onchange="showEAInfo(this.options[this.selectedIndex].value)" required>\
-      <option value="noEa">No client</option>\
+      <select id="eaName" id="eaName" class="form-control mb-1">\
+      <option value="noEa">Manager</option>\
       <option value="ea">Energy Advocate One</option>\
       <option value="ea">Energy Advocate Two</option>\
       <option value="ea">Energy Advocate Three</option>\
@@ -689,6 +689,7 @@
       document.getElementById('clientInfo').innerHTML='';
     } 
   }
+
 </script>
 
 <script>
