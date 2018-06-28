@@ -461,6 +461,14 @@
     if( name == 'visitFirst' ) {
       document.getElementById('formGenerated').innerHTML =
       '<form action="/#">\
+      <label for="eaName" class="mt-1 mb-1">Assign to an Energy Advocate</label>\
+      <select id="eaName" id="eaName" class="form-control mb-1" onchange="showEAInfo(this.options[this.selectedIndex].value)" required>\
+      <option value="noEa">No client</option>\
+      <option value="ea">Energy Advocate One</option>\
+      <option value="ea">Energy Advocate Two</option>\
+      <option value="ea">Energy Advocate Three</option>\
+      <option value="ea">Energy Advocate Four</option>\
+      </select>\
       <label for="clientName" class="mt-1 mb-1">Assign to a client</label>\
       <select id="clientName" id="clientName" class="form-control mb-1" onchange="showClientInfo(this.options[this.selectedIndex].value)" required>\
       <option value="noClient">No client</option>\
