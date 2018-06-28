@@ -458,7 +458,7 @@
 <script>
   function showForm(name){
     console.log(name);
-    if(name == 'homeVisit') {
+    if(name == 'visitFirst') {
       document.getElementById('formGenerated').innerHTML =
       '<form action="/#">\
       <label for="clientName" class="mt-1 mb-1">Assign to a client</label>\
@@ -491,7 +491,7 @@
       </div>\
       </div>\
       </form>';
-    } else if ( name == 'phoneCitizen'){
+    } else if ( name == 'phoneOngoing'){
       document.getElementById('formGenerated').innerHTML =
       '<div>\
       <label>Task Details</label>\
@@ -515,7 +515,7 @@
       <option>Citizen Thirty-six</option>\
       </select>\
       </div>';
-    } else if ( name == 'phoneHomeVisit'){
+    } else if ( name == 'phoneVisit'){
       document.getElementById('formGenerated').innerHTML =
       '<div>\
       <label>Task Details</label>\
@@ -539,7 +539,7 @@
       <option>Citizen Thirty-six</option>\
       </select>\
       </div>';
-    } else if ( name == 'contactUpdate'){
+    } else if ( name == 'emailOngoing'){
       document.getElementById('formGenerated').innerHTML =
       '<div>\
       <label>Task Details</label>\
