@@ -173,7 +173,6 @@
             <th data-sort="name">Citizens name <img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
             <th data-sort="name">Status <img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
             <th data-sort="name">Referrer <img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
-            <th>Update referrer</th>
             <th data-sort="name">Contact Info <img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
             <th>Notes</th>
             <th>Move to historic</th>
@@ -184,7 +183,6 @@
            <td>Citizen Fourty-four</td>
            <td>Pending</td>
            <td>Council : name</td>
-           <td><label class="form-check-label"><input type="checkbox" id="checkModal1" class="form-check-input"> Requested update</label></td>
            <td>077123456789</td>
            <td>
             <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes1" aria-expanded="false" aria-controls="collapseNotes1">View</button>
@@ -205,7 +203,6 @@
           <td>Citizen Thirty-six</td>
           <td>Pending</td>
           <td>Council : name</td>
-          <td></td>
           <td>077123456789</td>
           <td>
             <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes2" aria-expanded="false" aria-controls="collapseNotes2">View</button>
@@ -226,7 +223,6 @@
           <td>Citizen Fifty</td>
           <td>Pending</td>
           <td>Council : name</td>
-          <td><label class="form-check-label"><input type="checkbox" id="checkModal3" class="form-check-input"> Requested update</label></td>
           <td>name@email.com</td>
           <td>
             <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes3" aria-expanded="false" aria-controls="collapseNotes3">View</button>
@@ -247,7 +243,6 @@
           <td>Citizen Twenty-three</td>
           <td>Pending</td>
           <td>RAMH : name</td>
-          <td><label class="form-check-label"><input type="checkbox" id="checkModal4" class="form-check-input"> Requested update</label></td>
           <td>077123456789</td>
           <td>
             <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes4" aria-expanded="false" aria-controls="collapseNotes4">View</button>
@@ -335,34 +330,6 @@
 </div>
 </div>
 
-<div class="modal fade" id="modal1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      </div>
-      <div class="modal-body">
-       <div>
-         <label>Task Details</label>
-         <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true">Referrer Name from XX has requested an update on Citizen Name.</textarea>
-       </div>
-       <div>
-         <label for="eaName" class="mt-1 mb-1">Assign to an Energy Advocate</label>
-         <select id="eaName" id="eaName" class="form-control mb-1">
-          <option value="noEa"></option>
-          <option value="ea">Energy Advocate One</option>
-          <option value="ea">Energy Advocate Two</option>
-          <option value="ea">Energy Advocate Three</option>
-          <option value="ea">Energy Advocate Four</option>
-        </select>
-      </div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-primary">Send</button>
-    </div>
-  </div>
-</div>
-</div>
 
 </div>
 </main>
@@ -412,56 +379,6 @@
     } 
   }
 
-</script>
-
-<script>
-  $(function()
-  {
-    $('#checkModal1').click(function()
-    {
-      if ($('#checkModal1').is(":checked")) {
-        $('#modal1').modal('show');
-      }else {
-        $('#modal1').modal('hide');
-      }
-    });
-  });
-
-  $(function()
-  {
-    $('#checkModal2').click(function()
-    {
-      if ($('#checkModal2').is(":checked")) {
-        $('#modal1').modal('show');
-      }else {
-        $('#modal1').modal('hide');
-      }
-    });
-  });
-
-  $(function()
-  {
-    $('#checkModal3').click(function()
-    {
-      if ($('#checkModal3').is(":checked")) {
-        $('#modal1').modal('show');
-      }else {
-        $('#modal1').modal('hide');
-      }
-    });
-  });
-
-  $(function()
-  {
-    $('#checkModal4').click(function()
-    {
-      if ($('#checkModal4').is(":checked")) {
-        $('#modal1').modal('show');
-      }else {
-        $('#modal1').modal('hide');
-      }
-    });
-  });
 </script>
 
 <script>
