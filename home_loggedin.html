@@ -332,6 +332,24 @@
 </div>
 </main>
 
+<style>
+#line {
+  border-bottom: 2px solid #2E8B57;
+}
+
+#module #accordionHeading.collapsed:after  {
+  content: '+';
+  float: right;
+  color: black;
+}
+
+#module #accordionHeading:not(.collapsed):after {
+  content: '-';
+  float: right;
+  color: black;
+}
+</style>
+
 <script>
   function showForm(name){
     console.log('started');
