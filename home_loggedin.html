@@ -151,120 +151,120 @@
             </div>
             <label>Add notes</label>
             <div>
-              <input type="text" class="form-control" spellcheck="true" rows="3">
-            </div>
-          </form>
-          <p><a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a></p>
+              <textarea type="text" class="form-control" spellcheck="true" rows="3"><textarea>
+              </div>
+            </form>
+            <p><a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 
 
-  <div id="module" class="container row mt-4">
-    <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseInvited" aria-expanded="false" aria-controls="collapseInvited">Invited citizens</a></h4>
-    <div class="collapse col-12 m-0 p-0" id="collapseInvited" aria-labelledby="headingInvited">
+    <div id="module" class="container row mt-4">
+      <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseInvited" aria-expanded="false" aria-controls="collapseInvited">Invited citizens</a></h4>
+      <div class="collapse col-12 m-0 p-0" id="collapseInvited" aria-labelledby="headingInvited">
 
-      <input type="search" class="tableFilter form-control col-11 col-md-6 col-lg-6 mb-2" spellcheck="true" data-table="status-table" placeholder="Filter table here...">
+        <input type="search" class="tableFilter form-control col-11 col-md-6 col-lg-6 mb-2" spellcheck="true" data-table="status-table" placeholder="Filter table here...">
 
-      <div class="table-responsive">
-       <table class="status-table table table-bordered table-sm text-left sortable">
-        <thead class="bg-success">
-          <tr>
-            <th data-sort="name">Citizens name <img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
-            <th data-sort="name">Status <img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
-            <th data-sort="name">Referrer <img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
-            <th data-sort="name">Contact Info <img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
-            <th>Notes</th>
-            <th>Move to historic</th>
+        <div class="table-responsive">
+         <table class="status-table table table-bordered table-sm text-left sortable">
+          <thead class="bg-success">
+            <tr>
+              <th data-sort="name">Citizens name <img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+              <th data-sort="name">Status <img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+              <th data-sort="name">Referrer <img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+              <th data-sort="name">Contact Info <img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+              <th>Notes</th>
+              <th>Move to historic</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+             <td>Citizen Fourty-four</td>
+             <td>Pending</td>
+             <td>Council : name</td>
+             <td>077123456789</td>
+             <td>
+              <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes1" aria-expanded="false" aria-controls="collapseNotes1">View</button>
+              <div class="collapse" id="collapseNotes1" aria-labelledby="headingNotes1">
+                <div class="card card-body">
+                  <h6>Notes</h6>
+                  <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <button type="button" class="close m-0" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </td>
           </tr>
-        </thead>
-        <tbody>
           <tr>
-           <td>Citizen Fourty-four</td>
-           <td>Pending</td>
-           <td>Council : name</td>
-           <td>077123456789</td>
-           <td>
-            <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes1" aria-expanded="false" aria-controls="collapseNotes1">View</button>
-            <div class="collapse" id="collapseNotes1" aria-labelledby="headingNotes1">
-              <div class="card card-body">
-                <h6>Notes</h6>
-                <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
+            <td>Citizen Thirty-six</td>
+            <td>Pending</td>
+            <td>Council : name</td>
+            <td>077123456789</td>
+            <td>
+              <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes2" aria-expanded="false" aria-controls="collapseNotes2">View</button>
+              <div class="collapse" id="collapseNotes2" aria-labelledby="headingNotes2">
+                <div class="card card-body">
+                  <h6>Notes</h6>
+                  <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
+                </div>
               </div>
-            </div>
-          </td>
-          <td>
-            <button type="button" class="close m-0" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </td>
-        </tr>
-        <tr>
-          <td>Citizen Thirty-six</td>
-          <td>Pending</td>
-          <td>Council : name</td>
-          <td>077123456789</td>
-          <td>
-            <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes2" aria-expanded="false" aria-controls="collapseNotes2">View</button>
-            <div class="collapse" id="collapseNotes2" aria-labelledby="headingNotes2">
-              <div class="card card-body">
-                <h6>Notes</h6>
-                <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
+            </td>
+            <td>
+              <button type="button" class="close m-0" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Citizen Fifty</td>
+            <td>Pending</td>
+            <td>Council : name</td>
+            <td>name@email.com</td>
+            <td>
+              <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes3" aria-expanded="false" aria-controls="collapseNotes3">View</button>
+              <div class="collapse" id="collapseNotes3" aria-labelledby="headingNotes3">
+                <div class="card card-body">
+                  <h6>Notes</h6>
+                  <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
+                </div>
               </div>
-            </div>
-          </td>
-          <td>
-            <button type="button" class="close m-0" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </td>
-        </tr>
-        <tr>
-          <td>Citizen Fifty</td>
-          <td>Pending</td>
-          <td>Council : name</td>
-          <td>name@email.com</td>
-          <td>
-            <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes3" aria-expanded="false" aria-controls="collapseNotes3">View</button>
-            <div class="collapse" id="collapseNotes3" aria-labelledby="headingNotes3">
-              <div class="card card-body">
-                <h6>Notes</h6>
-                <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
+            </td>
+            <td>
+              <button type="button" class="close m-0" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Citizen Twenty-three</td>
+            <td>Pending</td>
+            <td>RAMH : name</td>
+            <td>077123456789</td>
+            <td>
+              <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes4" aria-expanded="false" aria-controls="collapseNotes4">View</button>
+              <div class="collapse" id="collapseNotes4" aria-labelledby="headingNotes4">
+                <div class="card card-body">
+                  <h6>Notes</h6>
+                  <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
+                </div>
               </div>
-            </div>
-          </td>
-          <td>
-            <button type="button" class="close m-0" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </td>
-        </tr>
-        <tr>
-          <td>Citizen Twenty-three</td>
-          <td>Pending</td>
-          <td>RAMH : name</td>
-          <td>077123456789</td>
-          <td>
-            <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes4" aria-expanded="false" aria-controls="collapseNotes4">View</button>
-            <div class="collapse" id="collapseNotes4" aria-labelledby="headingNotes4">
-              <div class="card card-body">
-                <h6>Notes</h6>
-                <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
-              </div>
-            </div>
-          </td>
-          <td>
-            <button type="button" class="close m-0" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            </td>
+            <td>
+              <button type="button" class="close m-0" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
 </div>
 
 
