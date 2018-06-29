@@ -119,15 +119,16 @@
             <label>Person referring citizen</label>
             <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
             <lable>Contact method</lable>
-            <select id="select_opt" class="form-control" onchange="showRefField(this.options[this.selectedIndex].value)" required>
-              <option value="default"></option>
-              <option value="ref1">None</option>
-              <option value="ref2">Mobile</option>
-              <option value="ref3">Email</option>
-              <option value="ref4">Mobile & Email</option>
-            </select>
-            <div id="input2"></div>
-
+            <div>
+              <select id="select_opt" class="form-control" onchange="showRefField(this.options[this.selectedIndex].value)" required>
+                <option value="default"></option>
+                <option value="ref1">None</option>
+                <option value="ref2">Mobile</option>
+                <option value="ref3">Email</option>
+                <option value="ref4">Mobile & Email</option>
+              </select>
+              <div id="input2"></div>
+            </div>
             <label class="form-check-label"><input type="checkbox" class="form-check-input"> Requested an update</label>
             <label>Assign to Energy Advocate</label>
             <select name="message">
