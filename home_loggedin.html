@@ -100,21 +100,22 @@
               <label>Forename</label>
               <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
             </div>
-            <label>Surname</label>
-            <div>
+            <div class="form-group">
+              <label>Surname</label>
               <input type="text" class="form-control" id="surname" name="surname" spellcheck="true">
             </div>
-            <div>
+            <div class="form-group">
+              <label>Contact method</label>
               <select name="select_opt" id="select_opt" class="form-control" onchange="showField(this.options[this.selectedIndex].value)" required>
-                <option value="default">Contact method</option>
+                <option value="default"></option>
                 <option value="cit1">Mobile</option>
                 <option value="cit2">Email</option>
                 <option value="cit3">Mobile & Email</option>
               </select>
               <div id="input1"></div>
             </div>
-            <label>Referral from</label>
-            <div>
+            <div class="form-group">
+              <label>Referral from</label>
               <select name="referral">
                 <option value="referral1">Advice works</option>
                 <option value="referral2">C4R</option>
@@ -124,11 +125,11 @@
                 <option value="referral6">RAMH</option>
               </select>
             </div>
-            <label>Person referring citizen</label>
-            <div>
+            <div class="form-group">
+              <label>Person referring citizen</label>
               <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
             </div>
-            <div>
+            <div class="form-group">
               <lable>Contact method</lable>
               <select id="select_opt" class="form-control" onchange="showRefField(this.options[this.selectedIndex].value)" required>
                 <option value="default"></option>
@@ -142,8 +143,8 @@
             <div>
               <label class="form-check-label"><input type="checkbox" class="form-check-input"> Requested an update</label>
             </div>
-            <label>Assign to Energy Advocate</label>
-            <div>
+            <div class="form-group">
+              <label>Assign to Energy Advocate</label>
               <select name="message">
                 <option value="messageDefault"></option>
                 <option value="message2">Energy Advocate One</option>
@@ -152,8 +153,8 @@
                 <option value="message5">Energy Advocate  Four</option>
               </select>
             </div>
-            <label>Add notes</label>
-            <div>
+            <div class="form-group">
+              <label>Add notes</label>
               <textarea type="text" class="form-control" spellcheck="true" rows="3"></textarea>
             </div>
           </form>
