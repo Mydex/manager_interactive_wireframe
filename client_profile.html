@@ -62,7 +62,41 @@
 
      <section class="container col-12" id="page1">
 
-      <h4 class="mt-4 mb-2">Interactions with Client</h4>
+      <h4 class="mt-4">Interactions with Client</h4>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
+          <h6 class="mt-4 mb-2">Client prefers contact via:</h6>
+          <div class="contact-selector mt-2">
+            <input type="checkbox" id="Text"/>
+            <label for="Text">Text</label>
+            <input type="checkbox" id="Message"/>
+            <label for="Message">App Messages</label>
+            <input type="checkbox" id="Phonecall"/>
+            <label for="Phonecall">Phonecall</label>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+          <h5 class="mt-4 mb-2">Home Visit Preferences</h5>
+          <div class="homeVisit-selector">
+            <input type="checkbox" id="mon" checked/>
+            <label for="mon">M</label>
+            <input type="checkbox" id="tue"/>
+            <label for="tue">T</label>
+            <input type="checkbox" id="wed"/>
+            <label for="wed">W</label>
+            <input type="checkbox" id="thu"/>
+            <label for="thu">T</label>
+            <input type="checkbox" id="fri" checked/>
+            <label for="fri">F</label>
+          </div>
+          <div class="homeVisit-selector mt-2">
+            <input type="checkbox" id="am" checked/>
+            <label for="am">AM</label>
+            <input type="checkbox" id="pm"/>
+            <label for="pm">PM</label>
+          </div>
+        </div>
+      </div>
       <div class="table-responsive mt-4">
        <table class="table table-bordered table-sm text-left">
         <thead class="table-info">
@@ -81,10 +115,13 @@
            <td>09:30</td>
            <td>First home visit</td>
            <td>
-
-           </td>
-         </tr>
-         <tr>
+            <div><a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverInteraction1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+              <div id="popoverInteraction1Content" class="row" style="display: none">
+                <p>EA notes & comment are here</p>
+              </div></div>
+            </td>
+          </tr>
+          <tr>
            <td>Message from Citizen Twenty</td>
            <td>03/03/2018</td>
            <td>10:23</td>
