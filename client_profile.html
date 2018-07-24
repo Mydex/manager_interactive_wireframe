@@ -1508,6 +1508,33 @@
   color: #ffffff;
 }
 
+.number-selector input {
+  display: none!important;
+}
+
+.number-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 40px;
+  width: 40px;
+  margin-right: 3px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.number-selector input[type=checkbox]:checked + label {
+  background: #2AD705;
+  color: #ffffff;
+}
+
+.number-selector input[type=checkbox]:disabled + label {
+  background: #90a4ae;
+  color: #ffffff;
+}
+
 </style>
 
 <script type="text/javascript">
