@@ -1497,6 +1497,22 @@
 </main>
 
 <style>
+#line {
+  border-bottom: 2px solid #1F5F8D;
+}
+
+#module #accordionHeading.collapsed:after  {
+  content: '+';
+  float: right;
+  color: black;
+}
+
+#module #accordionHeading:not(.collapsed):after {
+  content: '-';
+  float: right;
+  color: black;
+}
+
 .hidden{
   display:none;
 }
