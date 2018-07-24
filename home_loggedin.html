@@ -143,7 +143,7 @@
                 </select>
               </div>
               <div id="input2"></div>
-              <label class="form-check-label"><input type="checkbox" class="form-check-input"> Requested an update</label>
+              <div><div class="update-selector mt-2"><label class="form-check-label"> Requested an <input type="checkbox" id="update"/><label for="update">update</label></label></div></div>
             </div>
             <div class="form-group">
               <label>Assign to Energy Advocate</label>
@@ -359,6 +359,28 @@
   content: '-';
   float: right;
   color: black;
+}
+
+.update-selector input {
+  display: none!important;
+}
+
+.update-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 30px;
+  width: 65px;
+  margin-right: 1px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.update-selector input[type=checkbox]:checked + label {
+  background: #2AD705;
+  color: #ffffff;
 }
 </style>
 
