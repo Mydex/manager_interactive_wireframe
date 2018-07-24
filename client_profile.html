@@ -1535,6 +1535,28 @@
   color: #ffffff;
 }
 
+.task-selector input {
+  display: none!important;
+}
+
+.task-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 35px;
+  width: 55px;
+  margin-right: 3px;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.task-selector input[type=checkbox]:checked + label {
+  background: #2AD705;
+  color: #ffffff;
+}
+
 </style>
 
 <script type="text/javascript">
