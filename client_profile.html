@@ -47,20 +47,8 @@
 
   <main style=" min-height:75%;">
     <div class="container mt-4">
-      <h2 class="font-italic mt-0 mb-0 mr-2"><b>Client Name V2</b></h2>
+      <h2 class="font-italic mt-0 mb-0 mr-2"><b>Client Name</b></h2>
 
-      <div class="container mt-4 p-0">
-       <ul class="breadcrumb">
-         <li><a href="javascript:unhide('page1')">Interactions</a></li>
-         <li><a href="javascript:unhide('page2')">Client Information</a></li>
-         <li><a href="javascript:unhide('page3')">Progress & Tasks</a></li>
-         <li><a href="javascript:unhide('page4')">Referrals</a></li>
-         <li><a href="javascript:unhide('page5')">Action Plan</a></li>
-         <li><a href="javascript:unhide('page6')">Advice</a></li>
-       </ul>
-     </div>
-
-     <section class="container col-12" id="page1">
 
       <h4 class="mt-4">Interactions with Client</h4>
       <div class="row">
@@ -162,11 +150,9 @@
    </table> 
  </div>
 
-</section>
 
 
 
-<section class="row hidden" id="page2">
 
   <div class="col-md-9 col-lg-9">
     <h4 class=" mt-4 mb-2">Client information</h4>
@@ -1150,11 +1136,9 @@
 </div>
 </div>
 
-</section>
 
 
 
-<section class="row hidden" id="page3">
 
   <div class="col-12 col-lg-5 col-md-5">
    <h4 class="mt-4 mb-2">Clients overall progress</h4>
@@ -1225,10 +1209,11 @@
 <a href="#" class="btn btn-outline-primary mt-0" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a>
 </div>
 
-</section>
 
 
-<section class="row hidden" id="page4">
+
+
+
 
   <h4 class="mt-4 mb-2">Client Referrals</h4>
   <div class="accordion row">
@@ -1300,9 +1285,11 @@
 </div>
 </div>
 
-</section>
 
-<section class="row hidden" id="page5">
+
+
+
+
 
   <h4 class="mt-4 mb-2">Client Action Plan</h4>
   <div class="col-12 col-lg-6 col-md-6 m-0 p-0 ml-1">
@@ -1489,9 +1476,11 @@
   </div>
 </div>
 
-</section>
 
-<section class="row hidden" id="page6">
+
+
+
+
   <h3 class="mt-4">How To:</h3>
   <div id="module" class="container row mt-3">
     <div class="col-12 p-0 m-0">Include in client's profile <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
@@ -1815,19 +1804,6 @@
 </style>
 
 <script type="text/javascript">
-  function unhide(divID) {
-    document.getElementById("page1").className = 'hidden';
-    document.getElementById("page2").className = 'hidden';
-    document.getElementById("page3").className = 'hidden';
-    document.getElementById("page4").className = 'hidden';
-    document.getElementById("page5").className = 'hidden';
-    document.getElementById("page6").className = 'hidden';
-
-    var item = document.getElementById(divID);
-    if (item) {
-      item.className=(item.className=='hidden')?'unhidden':'hidden';
-    }
-  }
 
   var counter = 0;
   function addSection() {
