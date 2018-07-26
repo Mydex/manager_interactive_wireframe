@@ -52,105 +52,130 @@
 
       <div id="module" class="container row mt-3">
         <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseInteractions" aria-expanded="false" aria-controls="collapseInteractions">Interactions with client</a></h4>
-        <div class="collapse col-12 p-0" id="collapseInteractions" aria-labelledby="headingInteractions">      <div class="row">
-          <div class="col-12 col-md-6 col-lg-6">
-            <h6 class="mt-4 mb-2">Client prefers contact via:</h6>
-            <div class="contact-selector mt-2">
-              <input type="checkbox" id="Text"/>
-              <label for="Text">Text</label>
-              <input type="checkbox" id="Message"/>
-              <label for="Message">App Messages</label>
-              <input type="checkbox" id="Phonecall"/>
-              <label for="Phonecall">Phonecall</label>
+        <div class="collapse col-12 p-0" id="collapseInteractions" aria-labelledby="headingInteractions">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-6">
+              <h6 class="mt-4 mb-2">Client prefers contact via:</h6>
+              <div class="contact-selector mt-2">
+                <input type="checkbox" id="Text"/>
+                <label for="Text">Text</label>
+                <input type="checkbox" id="Message"/>
+                <label for="Message">App Messages</label>
+                <input type="checkbox" id="Phonecall"/>
+                <label for="Phonecall">Phonecall</label>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <h5 class="mt-4 mb-2">Home Visit Preferences</h5>
+              <div class="homeVisit-selector">
+                <input type="checkbox" id="mon" checked/>
+                <label for="mon">M</label>
+                <input type="checkbox" id="tue"/>
+                <label for="tue">T</label>
+                <input type="checkbox" id="wed"/>
+                <label for="wed">W</label>
+                <input type="checkbox" id="thu"/>
+                <label for="thu">T</label>
+                <input type="checkbox" id="fri" checked/>
+                <label for="fri">F</label>
+              </div>
+              <div class="homeVisit-selector mt-2">
+                <input type="checkbox" id="am" checked/>
+                <label for="am">AM</label>
+                <input type="checkbox" id="pm"/>
+                <label for="pm">PM</label>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-6">
-            <h5 class="mt-4 mb-2">Home Visit Preferences</h5>
-            <div class="homeVisit-selector">
-              <input type="checkbox" id="mon" checked/>
-              <label for="mon">M</label>
-              <input type="checkbox" id="tue"/>
-              <label for="tue">T</label>
-              <input type="checkbox" id="wed"/>
-              <label for="wed">W</label>
-              <input type="checkbox" id="thu"/>
-              <label for="thu">T</label>
-              <input type="checkbox" id="fri" checked/>
-              <label for="fri">F</label>
-            </div>
-            <div class="homeVisit-selector mt-2">
-              <input type="checkbox" id="am" checked/>
-              <label for="am">AM</label>
-              <input type="checkbox" id="pm"/>
-              <label for="pm">PM</label>
-            </div>
-          </div>
-        </div>
-        <div class="table-responsive mt-4">
-         <table class="table table-bordered table-sm text-left">
-          <thead class="table-info">
-            <tr>
-             <th>Interaction</th>
-             <th>Date</th>
-             <th>Time</th>
-             <th>Notes</th>
-             <th>Details</th>
-           </tr>
-         </thead>
-         <tbody>
-           <tr>
-             <td>Home Visit</td>
-             <td>01/09/2018</td>
-             <td>09:30</td>
-             <td>First home visit</td>
-             <td>
-              <div><a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverInteraction1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
-                <div id="popoverInteraction1Content" class="row" style="display: none">
-                  <p>EA notes & comment are here</p>
-                </div></div>
+          <div class="table-responsive mt-4">
+           <table class="order-table table table-bordered table-sm text-left sortable" id="messageTable">
+            <thead class="table-info">
+              <tr>
+               <th data-sort="name">Interaction <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+               <th data-sort="date">Date <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+               <th>Time</th>
+               <th>Notes</th>
+               <th>Details</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td>Home Visit</td>
+               <td>01/09/2018</td>
+               <td>09:30</td>
+               <td>First home visit</td>
+               <td>
+                 
+               </td>
+             </tr>
+             <tr>
+               <td>Message from Citizen Twenty</td>
+               <td>03/03/2018</td>
+               <td>10:23</td>
+               <td>Message from client</td>
+               <td>
+                <div id="moduleMessages" class="row">
+                  <p class="collapse col-10" id="messageOne" aria-expanded="false">
+                    <i>All message details can be read here and replied to.</i>
+                    <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                    <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
+                  </p>
+                  <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageOne" aria-expanded="false" aria-controls="messageOne"></a>
+                </div>
               </td>
             </tr>
             <tr>
-             <td>Message from Citizen Twenty</td>
+             <td>Message to Citizen Twenty</td>
              <td>03/03/2018</td>
-             <td>10:23</td>
-             <td>Message details here</td>
+             <td>14:47</td>
+             <td>Message to client</td>
              <td>
-              <div><p>
-                <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseInteraction1" aria-expanded="false" aria-controls="collapseInteraction1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button></p>
-                <div class="collapse" id="collapseInteraction1" aria-labelledby="headingInteraction1">
-                  <div class="card card-body">
-                    <p contenteditable="true" spellcheck="true">EA notes & comment are here</p>
-                  </div>
-                </div>
+               <div id="moduleMessages" class="row">
+                 <p class="collapse col-10" id="messageTwo" aria-expanded="false">
+                   <i>All message details can be read here and replied to.</i>
+                   <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                   <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
+                 </p>
+                 <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageTwo" aria-expanded="false" aria-controls="messageTwo"></a>
+               </div>
+             </td>
+           </tr>
+           <tr>
+             <td>Message from Citizen Twenty</td>
+             <td>02/02/2018</td>
+             <td>15:26</td>
+             <td>Message from client</td>
+             <td>
+               <div id="moduleMessages" class="row">
+                 <p class="collapse col-10" id="messageThree" aria-expanded="false">
+                   <i>All message details can be read here and replied to.</i>
+                   <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                   <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
+                 </p>
+                 <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageThree" aria-expanded="false" aria-controls="messageThree"></a>
+               </div>
+             </td>
+           </tr>
+           <tr>
+             <td>Message to Citizen Twenty</td>
+             <td>01/02/2018</td>
+             <td>09:12</td>
+             <td>Message to client</td>
+             <td>
+              <div id="moduleMessages" class="row">
+                <p class="collapse col-10" id="messageFour" aria-expanded="false">
+                  <i>All message details can be read here and replied to.</i>
+                  <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                  <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
+                </p>
+                <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageFour" aria-expanded="false" aria-controls="messageFour"></a>
               </div>
             </td>
           </tr>
-          <tr>
-           <td>Message to Citizen Twenty</td>
-           <td>03/03/2018</td>
-           <td>14:47</td>
-           <td>Message details here</td>
-           <td></td>
-         </tr>
-         <tr>
-           <td>Message from Citizen Twenty</td>
-           <td>02/02/2018</td>
-           <td>15:26</td>
-           <td>Message details here</td>
-           <td></td>
-         </tr>
-         <tr>
-           <td>Message to Citizen Twenty</td>
-           <td>01/02/2018</td>
-           <td>09:12</td>
-           <td>Message details here</td>
-           <td></td>
-         </tr>
-       </tbody>
-     </table> 
-   </div>
- </div>
+        </tbody>
+      </table> 
+    </div>
+  </div>
 </div>
 
 
