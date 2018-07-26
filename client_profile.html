@@ -1814,12 +1814,38 @@
   float: right;
   color: black;
 }
-.hidden{
-  display:none;
+
+#moduleMessages a.collapsed:after  {
+  content: '+';
 }
 
-.unhidden{
-  display:block;
+#moduleMessages a:not(.collapsed):after {
+  content: '-';
+}
+
+#moduleMessages {
+  width: 400px;
+}
+
+#moduleMessages p.collapse[aria-expanded="false"] {
+  height: 21px !important;
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+}
+
+#moduleMessages p.collapsing[aria-expanded="false"] {
+  height: 21px !important;
+}
+
+#moduleMessages a.collapsed:after  {
+  content: '+';
+}
+
+#moduleMessages a:not(.collapsed):after {
+  content: '-';
 }
 
 .homeVisit-selector input {
@@ -1917,8 +1943,7 @@
 
 </style>
 
-<script type="text/javascript">
-
+<script>
   var counter = 0;
   function addSection() {
     var newDiv = document.createElement('div');
@@ -2020,6 +2045,21 @@
     document.getElementById('content').removeChild(input.parentNode);
   }
 
+  var letterCounter = 1;
+  function addMoreLetters(){
+    var newDiv = document.createElement('div');
+    newDiv.innerHTML = 
+    "<input style='width: auto;' type='text' class='form-control' id='picName"+ letterCounter + "' name='picName' value='Display name:'/>\
+    <label class='btn btn-outline-primary mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);' for='image"+ letterCounter + "'>\
+    <input id='image"+ letterCounter + "' type='file' accept='image/*' style='display:none' onchange='$('#upload-file-info').html(this.files[0].name)'> Choose file</label><span class='font-italic' id='upload-file-info'> No file chosen</span><br>\
+    <button class='btn btn-outline-primary mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>"
+    document.getElementById('moreLetters').appendChild(newDiv);
+    letterCounter ++;
+  }
+
+  function removeRow(input) {
+    document.getElementById('moreLetters').removeChild(input.parentNode);
+  }
 
   function showElecPay(name){
     if(name == 'elecPay3') {
@@ -2036,6 +2076,100 @@
       document.getElementById('gasPayOther').innerHTML='';
     } 
   }
+
+  //For table filters
+  (function(document) {
+    'use strict';
+    var TableFilter = (function(Arr) {
+      var input;
+
+      function onInputEvent(e) {
+        input = e.target;
+        var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+        Arr.forEach.call(tables, function(table) {
+          Arr.forEach.call(table.tBodies, function(tbody) {
+            Arr.forEach.call(tbody.rows, filterRow);
+          });
+        });
+      }
+
+      function filterRow(row) {
+        var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
+        row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+      }
+
+      return {
+        init: function() {
+          var inputs = document.getElementsByClassName('tableFilter');
+          Arr.forEach.call(inputs, function(input) {
+            input.oninput = onInputEvent;
+          });
+        }
+      };
+    })(Array.prototype);
+
+    document.addEventListener('readystatechange', function() {
+      if (document.readyState === 'complete') {
+        TableFilter.init();
+      }
+    });
+
+  })(document);
+
+  //sort tables
+  var compare = {
+    name: function(a, b) {
+      a = a.replace(/^the /i, '');
+      b = b.replace(/^the /i, '');
+      if (a < b) {
+        return -1;
+      } else {
+        return a > b ? 1 : 0;
+      }
+    },
+    duration: function(a, b) {
+      a = a.split(':');
+      b = b.split(':');
+      a = Number(a[0]) * 60 + Number(a[1]);
+      b = Number(b[0]) * 60 + Number(b[1]);
+      return a - b;
+    },
+    date: function(a, b) {
+      a = new Date(a);
+      b = new Date(b);
+      return a - b;
+    }
+  };
+
+  $('.sortable').each(function(){
+    var $table = $(this);
+    var $tbody = $table.find('tbody');
+    var $controls = $table.find('th');
+    var rows = $tbody.find('tr').toArray();
+
+    $controls.on('click', function() {
+      var $header = $(this);
+      var order = $header.data('sort');
+      var column;
+
+      if ($header.is('.ascending') || $header.is('.descending')) {
+        $header.toggleClass('ascending descending');
+        $tbody.append(rows.reverse());
+      } else {
+        $header.addClass('ascending');
+        $header.siblings().removeClass('ascending descending');
+        if (compare.hasOwnProperty(order)) {
+          column = $controls.index(this);
+          rows.sort(function(a, b){
+            a = $(a).find('td').eq(column).text();
+            b = $(b).find('td').eq(column).text();
+            return compare[order](a, b);
+          });
+          $tbody.append(rows);
+        }
+      }
+    });
+  });
 </script>
 
 <script>
