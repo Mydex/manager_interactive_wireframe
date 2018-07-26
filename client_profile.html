@@ -656,112 +656,112 @@
         </table>
       </div>
     </div>
-
-
-
-    <div role="tadpanel" class="tab-pane fade" id="safety" aria-labelledby="safety-tab">
-      <table class="table table-bordered table-sm text-left mb-0">
-        <thead>
-          <th colspan="2" class="bg-primary">Safety Information</th>
-        </thead>
-        <tbody>
-          <tr>
-            <th class="text-primary">Do you have working smoke alarms?</th>
-            <td class="font-italic">
-              <form action="#" class="m-0">
-                <select name="smokeAlarm" id="smokeAlarm" onchange="showSmoke(this.options[this.selectedIndex].value)" required>
-                  <option value="smokeDefault"></option>
-                  <option value="smoke1">No</option>
-                  <option value="smoke2">Yes</option>
-                </select>
-              </form>
-              <div id="smokeAlarmYes"></div>
-            </td>
-          </tr>
-          <tr>
-            <th class="text-primary">Are carbon monoxide monitors fitted?</th>
-            <td class="font-italic">
-              <form action="#" class="m-0">
-               <select name="carbon" id="smokeAlarm" onchange="showCarbon(this.options[this.selectedIndex].value)" required>
-                <option value="carbonDefault"></option>
-                <option value="carbon1">No</option>
-                <option value="carbon2">Yes</option>
-              </select>
-            </form>
-            <div id="carbonAlarmYes"></div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 
 
-  <div role="tadpanel" class="tab-pane fade" id="household" aria-labelledby="household-tab">
+  <div role="tadpanel" class="tab-pane fade" id="safety" aria-labelledby="safety-tab">
     <table class="table table-bordered table-sm text-left mb-0">
       <thead>
-        <th colspan="2" class="bg-primary">Household Information</th>
+        <th colspan="2" class="bg-primary">Safety Information</th>
       </thead>
       <tbody>
         <tr>
-          <th class="text-primary">Is a member of the house in receipt of any benefits?</th>
+          <th class="text-primary">Do you have working smoke alarms?</th>
           <td class="font-italic">
             <form action="#" class="m-0">
-             <select name="benefits">
-              <option value="benefitsDefault"></option>
-              <option value="benefits1">Yes</option>
-              <option value="benefits2">No</option>
+              <select name="smokeAlarm" id="smokeAlarm" onchange="showSmoke(this.options[this.selectedIndex].value)" required>
+                <option value="smokeDefault"></option>
+                <option value="smoke1">No</option>
+                <option value="smoke2">Yes</option>
+              </select>
+            </form>
+            <div id="smokeAlarmYes"></div>
+          </td>
+        </tr>
+        <tr>
+          <th class="text-primary">Are carbon monoxide monitors fitted?</th>
+          <td class="font-italic">
+            <form action="#" class="m-0">
+             <select name="carbon" id="smokeAlarm" onchange="showCarbon(this.options[this.selectedIndex].value)" required>
+              <option value="carbonDefault"></option>
+              <option value="carbon1">No</option>
+              <option value="carbon2">Yes</option>
             </select>
           </form>
+          <div id="carbonAlarmYes"></div>
         </td>
       </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div role="tadpanel" class="tab-pane fade" id="household" aria-labelledby="household-tab">
+  <table class="table table-bordered table-sm text-left mb-0">
+    <thead>
+      <th colspan="2" class="bg-primary">Household Information</th>
+    </thead>
+    <tbody>
       <tr>
-        <th class="text-primary">Benefit type/s</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">Would you like a benefit check?</th>
+        <th class="text-primary">Is a member of the house in receipt of any benefits?</th>
         <td class="font-italic">
           <form action="#" class="m-0">
-           <select name="check">
-            <option value="checkDefault"></option>
-            <option value="check1">Yes</option>
-            <option value="check2">No</option>
+           <select name="benefits">
+            <option value="benefitsDefault"></option>
+            <option value="benefits1">Yes</option>
+            <option value="benefits2">No</option>
           </select>
         </form>
       </td>
     </tr>
     <tr>
-      <th class="text-primary">How many people live in the house?
-        <br>
-        <ul class="m-0">Adults</ul>
-        <ul class="m-0">Children</ul>
-      </th>
+      <th class="text-primary">Benefit type/s</th>
+      <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th class="text-primary">Would you like a benefit check?</th>
       <td class="font-italic">
-        <br>
-        <div>
-         <form action="#" class="m-0">
-          <select name="adultOne">
-            <option value="adultDefault"></option>
-            <option value="adult1">1</option>
-            <option value="adult2">2</option>
-            <option value="adult3">3</option>
-            <option value="adult4">4</option>
-          </select>
-        </form>
-      </div>
+        <form action="#" class="m-0">
+         <select name="check">
+          <option value="checkDefault"></option>
+          <option value="check1">Yes</option>
+          <option value="check2">No</option>
+        </select>
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <th class="text-primary">How many people live in the house?
+      <br>
+      <ul class="m-0">Adults</ul>
+      <ul class="m-0">Children</ul>
+    </th>
+    <td class="font-italic">
+      <br>
       <div>
        <form action="#" class="m-0">
-        <select name="childrenOne">
-          <option value="childrenDeault"></option>
-          <option value="children0">0</option>
-          <option value="children1">1</option>
-          <option value="children2">2</option>
-          <option value="children3">3</option>
-          <option value="children4">4</option>
+        <select name="adultOne">
+          <option value="adultDefault"></option>
+          <option value="adult1">1</option>
+          <option value="adult2">2</option>
+          <option value="adult3">3</option>
+          <option value="adult4">4</option>
         </select>
       </form>
     </div>
-  </td>
+    <div>
+     <form action="#" class="m-0">
+      <select name="childrenOne">
+        <option value="childrenDeault"></option>
+        <option value="children0">0</option>
+        <option value="children1">1</option>
+        <option value="children2">2</option>
+        <option value="children3">3</option>
+        <option value="children4">4</option>
+      </select>
+    </form>
+  </div>
+</td>
 </tr>
 <tr>
   <th class="text-primary">Date of births for all children</th>
