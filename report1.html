@@ -16,9 +16,7 @@
     <a class="navbar-brand mx-auto" href="https://mydex.github.io/manager_interactive_wireframe/home_loggedin.html">
       <img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/EPCAS-square.jpg" alt="logo" width="40">
     </a>
-    <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>   
+    <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>   
     <div class="collapse navbar-collapse" id="nav-content">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item"><a href="https://mydex.github.io/manager_interactive_wireframe/home_loggedin.html" class="nav-link text-white font-weight-light">Home</a></li>
@@ -53,7 +51,6 @@
           Return to reports <a href="https://mydex.github.io/manager_interactive_wireframe/reports.html" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><img class="rounded" src="https://mydex.github.io/manager_interactive_wireframe/images/double-arrow.png" alt="logo" width="20"></a>
         </p>
       </div>
-
       <div id="module" class="container row mt-3">
         <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSavings" aria-expanded="false" aria-controls="collapseSavings" onclick="showPrintButton();">Calendar savings</a></h4>
         <div class="collapse col-12" id="collapseSavings" aria-labelledby="headingSavings">
@@ -115,8 +112,6 @@
         </p>
       </div>
     </div>
-
-
     <div id="module" class="container row mt-3">
       <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFinancial" aria-expanded="false" aria-controls="collapseFinancial" onclick="showPrintButton();">Financial year savings</a></h4>
       <div class="collapse col-12" id="collapseFinancial" aria-labelledby="headingFinancial">
@@ -178,8 +173,6 @@
       </p>
     </div>
   </div>
-
-
   <div id="module" class="container row mt-3">
     <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSpecified" aria-expanded="false" aria-controls="collapseSpecified" onclick="showPrintButton();">Specified time savings</a></h4>
     <div class="collapse col-12" id="collapseSpecified" aria-labelledby="headingSpecified">
@@ -237,11 +230,9 @@
       </p>
     </div>
   </div>
-
   <div id="module" class="container row mt-3">
     <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapse2018Savings" aria-expanded="false" aria-controls="collapse2018Savings" onclick="showPrintButton();">2018 savings</a></h4>
     <div class="collapse col-12 p-0 m-0" id="collapse2018Savings" aria-labelledby="heading2018Savings">
-
       <div class="table-responsive">
         <table class="table table-hover table-bordered table-sm text-left">
           <thead class="bg-success">
@@ -372,12 +363,9 @@
           </tbody>
         </table>
       </div>
-
       <canvas id="lineChart"></canvas>
-
     </div>
   </div>
-
   <div class="row mt-5"  id="printButtons" style="display: none">
     <p class="col-12 col-md-4 col-lg-4">Print all reports
       <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
@@ -387,10 +375,8 @@
       <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
     </p>
   </div>
-
 </div>
 </main>
-
 
 <style>
 #line {
@@ -411,7 +397,6 @@
 </style>
 
 <script>
-
   var ctxL = document.getElementById("lineChart").getContext('2d');
   var myLineChart = new Chart(ctxL, {
     type: 'line',
